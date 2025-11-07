@@ -1,0 +1,16 @@
+name: Restrict PRs to stage
+
+on:
+  pull_request:
+    branches: [ stage ]
+
+jobs:
+  restrict_stage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Block PRs not from feature branches
+        run: |
+          if [[ "${{ github.head_ref }}" == "main" ]]; then
+            echo "❌ PRs from 'main' to 'stage' are not allowed."
+            exit 1
+          fi
