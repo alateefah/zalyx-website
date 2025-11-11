@@ -83,10 +83,16 @@ const ComingSoon: React.FC = () => {
 
           {/* Footer */}
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm text-gray-400 text-center sm:text-left">
-            <span>Privacy: we won't spam you.</span>
+            <a href="/privacy" className="hover:underline">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="hover:underline">
+              Terms & Conditions
+            </a>
             <span>© {new Date().getFullYear()} Zalyx Technologies</span>
           </div>
         </section>
+        
 
         <footer className="mt-6 text-center text-xs text-gray-500">
           Built with ❤️ — refined design for launch.
