@@ -1,3 +1,5 @@
+import Footer from "./footer";
+
 export default function HeroSection() {
   return (
     <>
@@ -264,6 +266,61 @@ export default function HeroSection() {
   {/* Background Glow */}
   <div className="absolute top-40 right-20 w-[500px] h-[500px] bg-gradient-to-br from-teal-400/20 to-purple-600/20 blur-[160px] pointer-events-none"></div>
 </section>
+
+    <section className="w-full py-20 md:py-32 px-6 md:px-16 bg-[#0b0d13] text-white relative overflow-hidden">
+       <div className="min-h-screen bg-background text-foreground">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-16 md:mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight max-w-lg">
+            Stay in the Loop with Zalyx Technologies
+          </h2>
+          
+          <div className="flex flex-col items-start gap-3 max-w-sm">
+          <img src="/icons/updates.png"   className="w-[45px] h-[21px]"
+        />
+
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          Get the latest updates, insights, and announcements—delivered straight to you.
+        </p>
+      </div>
+
+        </div>
+
+        {/* Join The Fam Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 items-stretch gap-5">
+          {/* Woman Image - 40% */}
+          <div className="relative lg:col-span-2 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[612px] rounded-[16px] overflow-hidden">
+          <img
+            src="/womanImage.png"
+            alt="Happy woman with sunglasses holding phone"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+          />
+        </div>
+
+
+        {/* Join Card - 60% */}
+        <div className="bg-[#121626] lg:col-span-3 rounded-[16px] p-8 md:p-16 flex flex-col justify-center">
+          <img src="/icons/join.png" className="h-10 w-10 mb-4" />
+
+          <h3 className="text-3xl md:text-4xl font-bold mb-5">Join the Zalyx Fam</h3>
+
+          <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-md">
+            Don't miss out on all the fun, updates and freebies. Keep up with us on social media.
+          </p>
+
+          <button className="w-fit px-8 py-4 rounded-lg border border-muted-foreground/40 text-foreground font-medium text-base hover:bg-muted/50 transition-colors duration-300">
+            Join Zalyx Family
+          </button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    {/* Background Glow */}
+      <div className="absolute top-40 right-20 w-[400px] h-[400px] glow-effect pointer-events-none" />
+    </section>
+    <Footer />
     </>
   );
 }
