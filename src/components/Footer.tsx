@@ -1,4 +1,4 @@
-export default function Footer() {
+export function Footer() {
   const quickLinks = [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms & Conditions", href: "/terms" },
@@ -64,7 +64,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full py-20 md:py-32 px-6 md:px-16 bg-[#0b0d13] text-white relative">
+    <section className="w-full py-20 md:py-32 px-6 md:px-16 bg-[#0b0d13] text-white relative">
       <div className="max-w-7xl mx-auto">
         
         {/* TOP SECTION */}
@@ -137,6 +137,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };

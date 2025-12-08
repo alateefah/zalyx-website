@@ -1,6 +1,6 @@
 import Navbar from "./NavBar";
 
-export default function Hero() { 
+export function Hero() { 
     return (
         <section className="w-full bg-[#0b0d13] text-white pt-10 md:pt-20 relative overflow-hidden min-h-screen">
             <Navbar />
