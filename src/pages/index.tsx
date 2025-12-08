@@ -1,4 +1,4 @@
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { JoinFam } from "../components/JoinFam";
 import { ProductShowcase } from "../components/ProductShowcase";
