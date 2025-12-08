@@ -34,21 +34,24 @@ const ComingSoon: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0A0C14] text-[#F1FDFF] px-6">
-      <main className="relative z-10 w-full max-w-2xl">
+      <main className="relative z-10 w-full max-w-3xl">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#26C7C3]/10 via-transparent to-[#8354AA]/10 blur-3xl pointer-events-none"></div>
+
         <section className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-10 shadow-2xl">
           {/* Header */}
+
           <div className="flex flex-col items-center sm:items-start gap-6 text-center sm:text-left">
             <img
               src="/zalyx-logo.png"
               alt="Zalyx Technologies"
               className="w-40 md:w-56 h-auto object-contain mx-auto sm:mx-0"
             />
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-              Coming Soon
+            <h1 className="text-4xl md:text-4xl  text-white leading-tight">
+              Zalyx Ledger Web is Coming Soon
             </h1>
             <p className="mt-1 text-gray-300 max-w-xl">
-              We're building something useful. Enter your email and we'll let you
-              know when we launch.
+              We're putting the final touches on a simple, powerful dashboard for African business owners.
+              Get notified when it launches
             </p>
           </div>
 
@@ -90,6 +93,15 @@ const ComingSoon: React.FC = () => {
               Terms & Conditions
             </a>
             <span>© {new Date().getFullYear()} Zalyx Technologies</span>
+          </div>
+          <div className="mt-4 text-center sm:text-left">
+            <a
+              href="/"
+              className="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white transition"
+            >
+              <span>←</span>
+              <span>Back to Home</span>
+            </a>
           </div>
         </section>
         
