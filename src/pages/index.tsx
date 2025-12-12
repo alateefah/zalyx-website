@@ -5,8 +5,7 @@ import { ProductShowcase } from "../components/ProductShowcase";
 import { WhyZalyx } from "../components/WhyZalyx";
 
 export default function LandingPage() {
-  return (
-    
+  return (  
     <div className="bg-[#0b0d13] text-white">
         <Hero />
         <WhyZalyx />

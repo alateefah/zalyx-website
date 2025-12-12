@@ -4,7 +4,7 @@ export function WhyZalyx() {
             <div className="wrapper max-w-[1300px] mx-auto px-6 md:px-12 lg:px-20">
 
             {/* Heading */}
-            <div className="text-center max-w-4xl mx-auto pb-12 pt-24">
+            <div className="text-center max-w-4xl mx-auto pb-12 pt-20">
                 <h2 className="text-4xl md:text-6xl lg:text-6xl font-bold">Why Zalyx Technologies?</h2>
 
                 <p className="text-gray-300 mt-12 text-xl max-w-[720px] mx-auto leading-relaxed">

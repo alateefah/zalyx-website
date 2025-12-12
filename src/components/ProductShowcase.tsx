@@ -32,12 +32,11 @@ export function ProductShowcase() {
             {/* RIGHT IMAGE */}
             <div className="flex justify-center lg:justify-end">
                 <img
-    src="/backgrounds/ledger-wave.png"
-    alt=""
-    className="absolute right-0"
-    // className="absolute right-0 bottom-0 w-[460px] opacity-[0.45] pointer-events-none select-none"
-    style={{ mixBlendMode: "screen" }}
-  />
+                    src="/backgrounds/ledger-wave.png"
+                    alt=""
+                    className="absolute right-0"
+                    style={{ mixBlendMode: "screen" }}
+                />
                 <img src="/mockups/ledger-phone.png" className="w-[360px] md:w-[420px] lg:w-[480px] drop-shadow-2xl" />
             </div>
 
