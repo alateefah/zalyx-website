@@ -2,7 +2,7 @@ name: Restrict PRs to stage
 
 on:
   pull_request:
-    branches: [ stage ]
+    branches: [stage]
 
 jobs:
   restrict_stage:
