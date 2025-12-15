@@ -5,26 +5,18 @@ export function Hero() {
 
   return (
     <section className="w-full min-h-screen bg-[#0b0d13] text-white z-20 flex flex-col items-center px-6 pt-10 md:pt-20 relative overflow-hidden">
-
-      {/* Background Image */}
-      {/* <img
+      <img
         src="/backgrounds/gradient-orb.png"
         alt=""
-        className="pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] md:w-[1050px] z-10"
-      /> */}
-
-<img
-  src="/backgrounds/gradient-orb.png"
-  alt=""
-  className="
-    pointer-events-none select-none 
-    absolute bottom-0 left-1/2 -translate-x-1/2
-    w-[1200px] md:w-[1600px] lg:w-[2000px]
-    opacity-100
-    
-    -z-10
-  "
-/>
+        className="
+          pointer-events-none select-none 
+          absolute bottom-0 left-1/2 -translate-x-1/2
+          w-[1200px] md:w-[1600px] lg:w-[2000px]
+          opacity-100
+          
+          -z-10
+        "
+      />
 
       {/* NAV */}
       <nav
@@ -87,10 +79,22 @@ export function Hero() {
             className="absolute top-full mt-4 right-0 w-48 rounded-2xl 
                        bg-[#0f121c] border border-white/10 shadow-xl p-4 flex flex-col gap-3 md:hidden"
           >
-            <a href="/" className="text-gray-200 py-2" onClick={() => setIsOpen(false)}>Home</a>
-            <a href="/#products" className="text-gray-200 py-2" onClick={() => setIsOpen(false)}>Products</a>
-            <a href="/#faq" className="text-gray-200 py-2" onClick={() => setIsOpen(false)}>FAQs</a>
-            <a href="mailto:support@zalyx.io" className="text-gray-200 py-2" onClick={() => setIsOpen(false)}>Support</a>
+            <a href="/" className="text-gray-200 py-2" onClick={() => setIsOpen(false)}>
+              Home
+            </a>
+            <a href="/#products" className="text-gray-200 py-2" onClick={() => setIsOpen(false)}>
+              Products
+            </a>
+            <a href="/#faq" className="text-gray-200 py-2" onClick={() => setIsOpen(false)}>
+              FAQs
+            </a>
+            <a
+              href="mailto:support@zalyx.io"
+              className="text-gray-200 py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Support
+            </a>
 
             <a
               href="/coming-soon"
@@ -118,8 +122,8 @@ export function Hero() {
         </h1>
 
         <p className="text-gray-300 mt-6 mx-auto max-w-[750px] text-xl leading-relaxed">
-          Zalyx Technologies creates powerful, easy-to-use software solutions
-          that simplify business operations, financial management, and everyday workflows.
+          Zalyx Technologies creates powerful, easy-to-use software solutions that simplify business
+          operations, financial management, and everyday workflows.
         </p>
 
         <button
@@ -143,25 +147,24 @@ export function Hero() {
         <p className="text-gray-300">Trusted by African business owners</p>
       </div> */}
       {/* TRUSTED BY */}
-        <div className="flex items-center justify-center gap-3 mt-16 text-gray-300 text-lg md:text-xl mb-20">
+      <div className="flex items-center justify-center gap-3 mt-16 text-gray-300 text-lg md:text-xl mb-20">
         <div className="flex -space-x-2 md:-space-x-3">
-            <img
+          <img
             className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-[#0b0d13]"
             src="https://i.pravatar.cc/50?img=11"
-            />
-            <img
+          />
+          <img
             className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-[#0b0d13]"
             src="https://i.pravatar.cc/50?img=22"
-            />
-            <img
+          />
+          <img
             className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-[#0b0d13]"
             src="https://i.pravatar.cc/50?img=33"
-            />
+          />
         </div>
 
         <p className="text-gray-300">Trusted by African business owners</p>
-        </div>
-
+      </div>
     </section>
   );
 }

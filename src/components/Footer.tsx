@@ -4,9 +4,7 @@ export function Footer() {
     { label: "Terms & Conditions", href: "/terms" },
   ];
 
-  const contactDetails = [
-    { label: "support@zalyx.io", href: "mailto:support@zalyx.io" },
-  ];
+  const contactDetails = [{ label: "support@zalyx.io", href: "mailto:support@zalyx.io" }];
 
   const socialLinks = [
     {
@@ -14,14 +12,16 @@ export function Footer() {
       href: "https://www.linkedin.com/company/zalyx/",
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-          <path d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 
+          <path
+            d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 
           2.761 2.239 5 5 5h14c2.761 0 5-2.239 
           5-5V5c0-2.761-2.239-5-5-5zM8 19H5V8h3v11zM6.5 
           6.732c-.966 0-1.75-.79-1.75-1.764S5.534 
           3.204 6.5 3.204s1.75.79 1.75 1.764S7.466 
           6.732 6.5 6.732zM19 19h-3v-5.604c0-3.368-4-3.113-4 
           0V19h-3V8h3v1.765C13.396 7.179 19 6.988 19 
-          12.241V19z"/>
+          12.241V19z"
+          />
         </svg>
       ),
     },
@@ -30,11 +30,13 @@ export function Footer() {
       href: "https://x.com/zalyxtech",
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 
+          <path
+            d="M18.244 2.25h3.308l-7.227 8.26 
           8.502 11.24H16.17l-5.214-6.817L4.99 
           21.75H1.68l7.73-8.835L1.254 
           2.25H8.08l4.713 6.231zm-1.161 
-          17.52h1.833L7.084 4.126H5.117z"/>
+          17.52h1.833L7.084 4.126H5.117z"
+          />
         </svg>
       ),
     },
@@ -43,7 +45,8 @@ export function Footer() {
       href: "https://instagram.com/zalyx.io",
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-          <path d="M12 2.163c3.204 0 3.584.012 
+          <path
+            d="M12 2.163c3.204 0 3.584.012 
           4.85.07 3.252.148 4.771 1.691 
           4.919 4.919.058 1.265.069 1.645.069 
           4.849 0 3.205-.012 3.584-.069 
@@ -57,7 +60,8 @@ export function Footer() {
           0-6.162 2.759-6.162 6.162S8.597 
           18.162 12 18.162s6.162-2.759 
           6.162-6.162S15.403 5.838 12 
-          5.838z"/>
+          5.838z"
+          />
         </svg>
       ),
     },
@@ -66,15 +70,14 @@ export function Footer() {
   return (
     <section className="w-full py-20 md:py-32 px-6 md:px-16 bg-[#0b0d13] text-white relative">
       <div className="max-w-7xl mx-auto">
-        
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
           {/* LOGO + COMPANY INFO */}
           <div className="lg:col-span-2">
             <img src="/zalyx-logo.png" alt="Zalyx Logo" className="h-12 w-auto mb-6" />
             <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
-              Zalyx Ledger is a company duly registered with RC Number: 9014239 under the Laws of the Federal Republic of Nigeria.
+              Zalyx Ledger is a company duly registered with RC Number: 9014239 under the Laws of
+              the Federal Republic of Nigeria.
             </p>
           </div>
 
@@ -84,10 +87,7 @@ export function Footer() {
             <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a 
-                    href={link.href}
-                    className="text-gray-400 text-sm hover:text-white transition"
-                  >
+                  <a href={link.href} className="text-gray-400 text-sm hover:text-white transition">
                     {link.label}
                   </a>
                 </li>
@@ -101,7 +101,7 @@ export function Footer() {
             <ul className="space-y-4">
               {contactDetails.map((contact, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={contact.href}
                     className="text-gray-400 text-sm hover:text-white transition"
                   >
@@ -118,9 +118,7 @@ export function Footer() {
 
         {/* BOTTOM SECTION */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-400 text-sm">
-            © 2025 Zalyx Technologies. All Rights Reserved.
-          </p>
+          <p className="text-gray-400 text-sm">© 2025 Zalyx Technologies. All Rights Reserved.</p>
 
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
@@ -139,4 +137,4 @@ export function Footer() {
       </div>
     </section>
   );
-};
+}
