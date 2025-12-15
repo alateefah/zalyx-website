@@ -154,7 +154,7 @@ export function Hero() {
           />
         </div>
 
-        <p className="text-gray-300">Trusted by African business owners</p>
+        <p className="text-gray-300">Built with African business owners in mind</p>
       </div>
     </section>
   );
