@@ -38,8 +38,15 @@ const faqs = [
   },
   {
     question: "How can I get early access?",
-    answer:
-      "You can join our early access list through the website or follow Zalyx on social media to get notified when we launch.",
+    answer: (
+      <>
+        You can join our early{" "}
+        <a href="/coming-soon" className="text-[#26C7C3] hover:underline">
+          access list
+        </a>{" "}
+        through the website or follow Zalyx on social media to get notified when we launch.
+      </>
+    ),
   },
 ];
 

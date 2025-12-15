@@ -27,7 +27,7 @@ export function Footer() {
     },
     {
       name: "X",
-      href: "https://x.com/zalyxtech",
+      href: "https://x.com/zalyx_io",
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
           <path

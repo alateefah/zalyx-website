@@ -131,21 +131,12 @@ export function Hero() {
           style={{
             background: "linear-gradient(270deg,#26C7C3 0%,#8354AA 100%)",
           }}
+          onClick={() => (window.location.href = "/#products")}
         >
-          Explore Our Products →
+          Explore Our Product →
         </button>
       </div>
 
-      {/* TRUSTED BY */}
-      {/* <div className="flex items-center justify-center gap-3 mt-16 text-gray-300 text-xl mb-32">
-        <div className="flex -space-x-3">
-          <img className="w-10 h-10 rounded-full border-2 border-[#0b0d13]" src="https://i.pravatar.cc/50?img=11" />
-          <img className="w-10 h-10 rounded-full border-2 border-[#0b0d13]" src="https://i.pravatar.cc/50?img=22" />
-          <img className="w-10 h-10 rounded-full border-2 border-[#0b0d13]" src="https://i.pravatar.cc/50?img=33" />
-        </div>
-
-        <p className="text-gray-300">Trusted by African business owners</p>
-      </div> */}
       {/* TRUSTED BY */}
       <div className="flex items-center justify-center gap-3 mt-16 text-gray-300 text-lg md:text-xl mb-20">
         <div className="flex -space-x-2 md:-space-x-3">

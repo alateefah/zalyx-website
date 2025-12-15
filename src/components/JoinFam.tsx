@@ -34,7 +34,6 @@ export function JoinFam() {
               src="/backgrounds/join-glow.png"
               alt=""
               className="absolute right-0 bottom-0"
-              // className="absolute right-[-180px] bottom-[-220px] w-[620px] opacity-[0.35] blur-[20px] pointer-events-none select-none"
               style={{ mixBlendMode: "screen" }}
             />
 
@@ -43,7 +42,6 @@ export function JoinFam() {
               src="/backgrounds/join-wave.png"
               alt=""
               className="absolute right-0 bottom-0"
-              // className="absolute right-[-120px] bottom-[-130px] w-[500px] opacity-[0.85] pointer-events-none select-none"
               style={{ mixBlendMode: "screen" }}
             />
 
@@ -63,7 +61,10 @@ export function JoinFam() {
                 media.
               </p>
 
-              <button className="px-8 py-4 border border-gray-600 text-white rounded-lg w-fit hover:bg-gray-500/10 transition">
+              <button
+                className="px-8 py-4 border border-gray-600 text-white rounded-lg w-fit hover:bg-gray-500/10 transition"
+                onClick={() => (window.location.href = "/coming-soon")}
+              >
                 Join Zalyx Family
               </button>
             </div>

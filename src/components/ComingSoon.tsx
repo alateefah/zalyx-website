@@ -50,8 +50,8 @@ const ComingSoon: React.FC = () => {
               Zalyx Ledger Web is Coming Soon
             </h1>
             <p className="mt-1 text-gray-300 max-w-xl">
-              We're putting the final touches on a simple, powerful dashboard for African business
-              owners. Get notified when it launches
+              We're putting the final touches on a simple, powerful app for African business owners.
+              Get notified when it launches
             </p>
           </div>
 
