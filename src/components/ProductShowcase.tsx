@@ -21,6 +21,10 @@ export function ProductShowcase() {
               Zalyx Ledger
             </span>
           </h2>
+          <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
+            Zalyx Ledger keeps your customer records, transaction history, and business data
+            securely stored and accessible across devices.
+          </p>
 
           <button
             className="px-14 py-8 rounded-xl text-white text-xl font-regular"

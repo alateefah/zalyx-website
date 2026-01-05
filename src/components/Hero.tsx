@@ -122,8 +122,8 @@ export function Hero() {
         </h1>
 
         <p className="text-gray-300 mt-6 mx-auto max-w-[750px] text-xl leading-relaxed">
-          Zalyx Technologies creates powerful, easy-to-use software solutions that simplify business
-          operations, financial management, and everyday workflows.
+          Zalyx Technologies builds modern digital and financial tools that help businesses stay organized, 
+          understand their numbers, and grow with confidence.
         </p>
 
         <button

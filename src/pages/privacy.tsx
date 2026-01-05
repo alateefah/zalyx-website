@@ -68,7 +68,24 @@ export default function PrivacyPolicy() {
             .
           </p>
 
-          <h2 className="text-xl font-semibold mt-10 mb-4">6. Changes</h2>
+          <h2 className="text-xl font-semibold mt-10 mb-4" id="account-deletion">6. Account Deletion</h2>
+          <p className="mb-6">
+            You may request deletion of your <strong>Zalyx Ledger account</strong> and all
+            associated personal and business data at any time.
+          </p>
+          <p className="mb-6">
+            To request account and data deletion, please email{" "}
+            <a href="mailto:lateefah@zalyx.io" className="text-blue-600">
+              lateefah@zalyx.io
+            </a>{" "}
+            using the email address or phone number associated with your account.
+          </p>
+          <p className="mb-6">
+            Account deletion requests are processed within <strong>7 business days</strong>, unless
+            a longer retention period is required by law.
+          </p>
+
+          <h2 className="text-xl font-semibold mt-10 mb-4">7. Changes</h2>
           <p>
             We may update this policy periodically. The latest version will always be available at{" "}
             <strong>zalyx.io/privacy</strong>.
