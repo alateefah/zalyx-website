@@ -10,12 +10,22 @@ export default function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Zalyx Ledger — Simple Digital Ledger for Small Businesses</title>
+        <title>Zalyx Technologies — Digital Tools for Small Businesses</title>
         <meta
           name="description"
-          content="Zalyx Ledger helps small businesses track sales, customers, and cash flow with a simple offline-first digital ledger."
+          content="Zalyx Technologies builds simple, powerful digital tools that help small businesses manage operations, customers, and records — including Zalyx Ledger, an offline-first digital ledger."
         />
+        <link rel="canonical" href="https://zalyx.io/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Zalyx Technologies" />
+        <meta
+          property="og:description"
+          content="Digital tools that help small businesses grow — including Zalyx Ledger."
+        />
+        <meta property="og:type" content="website" />
       </Helmet>
+
       <div className="bg-[#0b0d13] text-white">
         <Hero />
         <WhyZalyx />
