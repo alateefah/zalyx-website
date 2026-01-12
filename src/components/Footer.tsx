@@ -76,8 +76,8 @@ export function Footer() {
           <div className="lg:col-span-2">
             <img src="/zalyx-logo.png" alt="Zalyx Logo" className="h-12 w-auto mb-6" />
             <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
-              Zalyx Ledger is a company duly registered with RC Number: 9014239 under the Laws of
-              the Federal Republic of Nigeria.
+              Zalyx Technologies is a company duly registered with RC Number: 9014239 under the Laws
+              of the Federal Republic of Nigeria.
             </p>
           </div>
 

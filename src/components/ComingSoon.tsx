@@ -47,7 +47,7 @@ const ComingSoon: React.FC = () => {
               className="w-40 md:w-56 h-auto object-contain mx-auto sm:mx-0"
             />
             <h1 className="text-4xl md:text-4xl  text-white leading-tight">
-              Zalyx Ledger Web is Coming Soon
+              Zalyx Ledger is Coming Soon
             </h1>
             <p className="mt-1 text-gray-300 max-w-xl">
               We're putting the final touches on a simple, powerful app for African business owners.

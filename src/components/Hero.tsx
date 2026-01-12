@@ -122,8 +122,8 @@ export function Hero() {
         </h1>
 
         <p className="text-gray-300 mt-6 mx-auto max-w-[750px] text-xl leading-relaxed">
-          Zalyx Technologies builds modern digital and financial tools that help businesses stay organized, 
-          understand their numbers, and grow with confidence.
+          Zalyx Technologies builds modern digital and financial tools that help businesses stay
+          organized, understand their numbers, and grow with confidence.
         </p>
 
         <button

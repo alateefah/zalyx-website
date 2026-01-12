@@ -7,8 +7,8 @@ export function WhyZalyx() {
           <h2 className="text-4xl md:text-6xl lg:text-6xl font-bold">Why Zalyx Technologies?</h2>
 
           <p className="text-gray-300 mt-12 text-xl max-w-[720px] mx-auto leading-relaxed">
-            We turn complexity into confidence. Zalyx designs connected tools that simplify operations, 
-            improve financial visibility, and empower entrepreneurs to grow sustainably.
+            We turn complexity into confidence. Zalyx designs connected tools that simplify
+            operations, improve financial visibility, and empower entrepreneurs to grow sustainably.
           </p>
         </div>
 
