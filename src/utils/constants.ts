@@ -5,7 +5,7 @@
 
 export const STORE_LINKS = {
   GOOGLE_PLAY: "https://play.google.com/store/apps/details?id=com.zalyx.ledger",
-  APP_STORE: "https://apps.apple.com/app/zalyx-ledger/id6670925674",
+  APP_STORE: "https://apps.apple.com/us/app/zalyx-ledger/id6756923647",
 } as const;
 
 export const SOCIAL_LINKS = {

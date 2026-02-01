@@ -5,8 +5,28 @@ import { Hero } from "../components/Hero";
 import { JoinFam } from "../components/JoinFam";
 import { ProductShowcase } from "../components/ProductShowcase";
 import { WhyZalyx } from "../components/WhyZalyx";
+import { STORE_LINKS } from "../utils/constants";
+import { useEffect } from "react";
 
 export default function LandingPage() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get("ref");
+
+    if (ref) {
+      // save referral for later app signup
+      localStorage.setItem("zalyx_referral_code", ref);
+
+      const ua = navigator.userAgent.toLowerCase();
+
+      if (ua.includes("android")) {
+        window.location.href = STORE_LINKS.GOOGLE_PLAY;
+      } else if (ua.includes("iphone") || ua.includes("ipad")) {
+        window.location.href = STORE_LINKS.APP_STORE;
+      }
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
