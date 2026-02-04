@@ -3,8 +3,8 @@ import { STORE_LINKS } from "../utils/constants";
 export function ProductShowcase() {
   const features = [
     { icon: "📱", text: "Works offline" },
-    { icon: "🔒", text: "Bank-level security" },
     { icon: "⏰", text: "Payment Reminders" },
+    { icon: "🔒", text: "Secure" },
     { icon: "💰", text: "Free" },
   ];
 

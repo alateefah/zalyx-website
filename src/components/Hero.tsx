@@ -59,6 +59,8 @@ export function Hero() {
     { label: "Support", href: "mailto:support@zalyx.io" },
   ];
 
+
+
   return (
     <section className="w-full min-h-screen bg-[#0b0d13] text-white z-20 flex flex-col items-center px-4 sm:px-6 pt-6 sm:pt-10 md:pt-20 relative overflow-hidden">
       {/* Animated gradient orbs */}
@@ -330,19 +332,24 @@ export function Hero() {
       </div>
 
       {/* TRUSTED BY */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 sm:mt-16 md:mt-24 mb-12 sm:mb-20 animate-fadeInUp px-4" style={{ animationDelay: "0.3s" }}>
+      <div className="flex flex-col sm:flex-col items-center justify-center gap-4 mt-12 sm:mt-16 md:mt-24 mb-12 sm:mb-20 animate-fadeInUp px-4" style={{ animationDelay: "0.3s" }}>
         <div className="flex -space-x-2 sm:-space-x-3">
-          {[11, 22, 33, 44, 55].map((img, i) => (
+          {/* Pexels artisan work images - Black/African artisans at work */}
+          {[
+            "https://images.pexels.com/photos/4358405/pexels-photo-4358405.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", // Black tailor threading sewing machine - Jake Ryan
+            "https://images.pexels.com/photos/3342364/pexels-photo-3342364.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", // Black hands threading sewing machine needle - nappy
+            "https://images.pexels.com/photos/4358405/pexels-photo-4358405.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop", // Black tailor threading sewing machine - Jake Ryan
+          ].map((src, i) => (
             <img
-              key={img}
+              key={i}
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0b0d13] object-cover"
-              src={`https://i.pravatar.cc/100?img=${img}`}
-              alt=""
+              src={src}
+              alt="Artisan at work"
               style={{ animationDelay: `${i * 0.1}s` }}
             />
           ))}
         </div>
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+        <div className="flex flex-col sm:flex-col items-center gap-2 sm:gap-4">
           <div className="flex items-center gap-1">
             {[1, 2, 3, 4, 5].map((star) => (
               <svg key={star} className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FFD700]" viewBox="0 0 24 24" fill="currentColor">
@@ -350,7 +357,10 @@ export function Hero() {
               </svg>
             ))}
           </div>
-          <p className="text-gray-400 text-xs sm:text-sm text-center">Built with African business owners in mind</p>
+          <div className="flex items-center gap-2">
+            <span className="text-lg">🇳🇬</span>
+            <p className="text-gray-400 text-xs sm:text-sm text-center">Built for African business owners</p>
+          </div>
         </div>
       </div>
 
