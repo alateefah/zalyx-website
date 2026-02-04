@@ -136,7 +136,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="text-gray-400">
-                <span className="text-sm">Abuja, Nigeria</span>
+                <span className="text-sm">Nigeria</span>
               </li>
             </ul>
           </div>
