@@ -5,25 +5,43 @@ import { Hero } from "../components/Hero";
 import { JoinFam } from "../components/JoinFam";
 import { ProductShowcase } from "../components/ProductShowcase";
 import { WhyZalyx } from "../components/WhyZalyx";
+import { openStore } from "../utils/constants";
+import { useEffect } from "react";
 
 export default function LandingPage() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get("ref");
+
+    if (ref) {
+      const ua = navigator.userAgent.toLowerCase();
+
+      if (ua.includes("android")) {
+        openStore("google");
+      } else if (ua.includes("iphone") || ua.includes("ipad")) {
+        openStore("apple");
+      }
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
-        <title>Zalyx Technologies — Digital Tools for Small Businesses</title>
+        <title>Zalyx Technologies – Digital Tools for African Entrepreneurs</title>
         <meta
           name="description"
-          content="Zalyx Technologies builds simple, powerful digital tools that help small businesses manage operations, customers, and records — including Zalyx Ledger, an offline-first digital ledger."
+          content="Zalyx Technologies builds simple, powerful digital tools that help African entrepreneurs manage operations, customers, and records. Download Zalyx Ledger — free forever."
         />
         <link rel="canonical" href="https://zalyx.io/" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Zalyx Technologies" />
+        <meta property="og:title" content="Zalyx Technologies – Digital Tools for Entrepreneurs" />
         <meta
           property="og:description"
-          content="Digital tools that help small businesses grow — including Zalyx Ledger."
+          content="Free digital tools for African entrepreneurs. Zalyx Ledger helps you track customers, orders, and payments offline and online."
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zalyx.io/" />
       </Helmet>
 
       <div className="bg-[#0b0d13] text-white">
