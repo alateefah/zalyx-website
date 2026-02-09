@@ -30,7 +30,8 @@ export const openStore = (store: "google" | "apple" = "google") => {
 /**
  * Helper function to get both store links as an array
  */
-export const getAllStoreLinks = () => [
-  { name: "Play Store", url: STORE_LINKS.GOOGLE_PLAY },
-  { name: "App Store", url: STORE_LINKS.APP_STORE },
-] as const;
+export const getAllStoreLinks = () =>
+  [
+    { name: "Play Store", url: STORE_LINKS.GOOGLE_PLAY },
+    { name: "App Store", url: STORE_LINKS.APP_STORE },
+  ] as const;

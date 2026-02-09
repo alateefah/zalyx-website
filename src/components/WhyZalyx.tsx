@@ -11,7 +11,7 @@ export function WhyZalyx() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -49,7 +49,10 @@ export function WhyZalyx() {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#0b0d13] text-white py-24 md:py-32 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="w-full bg-[#0b0d13] text-white py-24 md:py-32 relative overflow-hidden"
+    >
       {/* Background decorations */}
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[#26C7C3]/5 to-transparent rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-[#8354AA]/5 to-transparent rounded-full blur-[150px] pointer-events-none" />
@@ -91,10 +94,14 @@ export function WhyZalyx() {
               }}
             >
               {/* Hover glow effect */}
-              <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+              <div
+                className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+              />
 
               {/* Icon with gradient background */}
-              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${card.gradient} p-0.5 mb-6`}>
+              <div
+                className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${card.gradient} p-0.5 mb-6`}
+              >
                 <div className="w-full h-full rounded-2xl bg-[#111524] flex items-center justify-center">
                   <img src={card.icon} className="h-7 w-7" alt="" />
                 </div>
@@ -103,20 +110,32 @@ export function WhyZalyx() {
               <h3 className="text-2xl md:text-3xl font-semibold mb-3 group-hover:text-[#26C7C3] transition-colors duration-300">
                 {card.title}
               </h3>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                {card.text}
-              </p>
+              <p className="text-gray-400 text-lg leading-relaxed">{card.text}</p>
 
               {/* Decorative corner element */}
               <div className="absolute top-6 right-6 w-20 h-20 opacity-5 group-hover:opacity-10 transition-opacity">
                 <svg viewBox="0 0 100 100" fill="none" className="w-full h-full">
-                  <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="1" className="text-white" />
-                  <circle cx="50" cy="50" r="25" stroke="currentColor" strokeWidth="1" className="text-white" />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    stroke="currentColor"
+                    strokeWidth="1"
+                    className="text-white"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="25"
+                    stroke="currentColor"
+                    strokeWidth="1"
+                    className="text-white"
+                  />
                 </svg>
               </div>
             </div>
           ))}
-        </div>     
+        </div>
       </div>
     </section>
   );
