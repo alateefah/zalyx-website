@@ -4,6 +4,7 @@ import ComingSoon from "./components/ComingSoon";
 import PrivacyPolicy from "./pages/privacy";
 import TermsAndConditions from "./pages/terms";
 import LandingPage from "./pages";
+import FieldOnboardingPartner from "./pages/field-onboarding-partner";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/field-onboarding-partner" element={<FieldOnboardingPartner />} />
       </Routes>
     </Router>
   );

@@ -84,7 +84,7 @@ export function FAQ() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -99,11 +99,21 @@ export function FAQ() {
       return (
         <>
           Download Zalyx Ledger from the{" "}
-          <a href={STORE_LINKS.GOOGLE_PLAY} target="_blank" rel="noopener noreferrer" className="text-[#26C7C3] hover:underline font-medium">
+          <a
+            href={STORE_LINKS.GOOGLE_PLAY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#26C7C3] hover:underline font-medium"
+          >
             Google Play Store
           </a>{" "}
           or{" "}
-          <a href={STORE_LINKS.APP_STORE} target="_blank" rel="noopener noreferrer" className="text-[#26C7C3] hover:underline font-medium">
+          <a
+            href={STORE_LINKS.APP_STORE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#26C7C3] hover:underline font-medium"
+          >
             Apple App Store
           </a>
           . Sign up in less than a minute and start tracking your first customer.
@@ -117,7 +127,8 @@ export function FAQ() {
           <a href={CONTACT.EMAIL_LINK} className="text-[#26C7C3] hover:underline font-medium">
             {CONTACT.EMAIL}
           </a>{" "}
-          or use the in-app chat. Our team responds quickly to help you get the most out of Zalyx Ledger.
+          or use the in-app chat. Our team responds quickly to help you get the most out of Zalyx
+          Ledger.
         </>
       );
     }
@@ -125,7 +136,11 @@ export function FAQ() {
   };
 
   return (
-    <section ref={sectionRef} id="faq" className="w-full bg-[#0b0d13] text-white py-24 md:py-30 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      id="faq"
+      className="w-full bg-[#0b0d13] text-white py-24 md:py-30 relative overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#26C7C3]/5 via-transparent to-[#8354AA]/5 rounded-full blur-[150px] pointer-events-none" />
 
@@ -172,14 +187,18 @@ export function FAQ() {
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between px-6 md:px-8 py-5 md:py-6 text-left group"
                 >
-                  <span className={`text-base md:text-lg font-medium pr-4 transition-colors duration-300 ${isOpen ? "text-[#26C7C3]" : "text-white group-hover:text-[#26C7C3]"}`}>
+                  <span
+                    className={`text-base md:text-lg font-medium pr-4 transition-colors duration-300 ${isOpen ? "text-[#26C7C3]" : "text-white group-hover:text-[#26C7C3]"}`}
+                  >
                     {faq.question}
                   </span>
 
                   {/* Animated icon */}
                   <span
                     className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      isOpen ? "bg-[#26C7C3]/20 text-[#26C7C3]" : "bg-white/5 text-gray-400 group-hover:bg-white/10"
+                      isOpen
+                        ? "bg-[#26C7C3]/20 text-[#26C7C3]"
+                        : "bg-white/5 text-gray-400 group-hover:bg-white/10"
                     }`}
                   >
                     <svg
@@ -225,7 +244,15 @@ export function FAQ() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105"
             style={{ background: "linear-gradient(270deg, #26C7C3 0%, #8354AA 100%)" }}
           >
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              className="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
             </svg>
