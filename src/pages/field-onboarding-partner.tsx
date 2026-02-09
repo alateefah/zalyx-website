@@ -44,6 +44,12 @@ export default function FieldOnboardingPartner() {
             <li>They’ve created at least one order</li>
             <li>A balance owed is recorded in the app</li>
           </ul>
+          
+          <p className="mb-8 text-sm">
+            This role includes a short daily activity update (2–3 minutes) to help track
+            progress and support your success.
+          </p>
+
 
           <h2 className="text-xl font-semibold mb-4">Commission & incentives</h2>
           <ul className="list-disc pl-6 mb-8 space-y-2">
