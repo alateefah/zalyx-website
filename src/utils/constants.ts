@@ -24,7 +24,16 @@ export const CONTACT = {
  */
 export const openStore = (store: "google" | "apple" = "google") => {
   const url = store === "apple" ? STORE_LINKS.APP_STORE : STORE_LINKS.GOOGLE_PLAY;
-  window.open(url, "_blank");
+  
+  // Use intent URL for Android (bypasses in-app browser blocking)
+  if (store === "google") {
+    const intentUrl = "intent://details?id=com.zalyx.ledger#Intent;scheme=market;action=android.intent.action.VIEW;package=com.android.vending;S.browser_fallback_url=" + encodeURIComponent(url) + ";end";
+    window.location.href = intentUrl;
+    return;
+  }
+  
+  // For iOS, direct location change works better than window.open
+  window.location.href = url;
 };
 
 /**
