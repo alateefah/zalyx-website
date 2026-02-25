@@ -5,24 +5,26 @@ import { Hero } from "../components/Hero";
 import { JoinFam } from "../components/JoinFam";
 import { ProductShowcase } from "../components/ProductShowcase";
 import { WhyZalyx } from "../components/WhyZalyx";
-import { openStore } from "../utils/constants";
-import { useEffect } from "react";
+import ReferralRedirect from "../components/ReferralRedirect";
+import { useLocation } from "react-router-dom";
+import { useMemo } from "react";
+
+function isReferralCode(value: string): boolean {
+  return /^ZLX-[A-Z0-9]{3}-[A-Z0-9]{4}$/.test(value);
+}
 
 export default function LandingPage() {
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const ref = params.get("ref");
+  const location = useLocation();
 
-    if (ref) {
-      const ua = navigator.userAgent.toLowerCase();
+  const referralCode = useMemo(() => {
+    const params = new URLSearchParams(location.search);
+    const code = params.get("referralCode")?.trim().toUpperCase();
+    return code && isReferralCode(code) ? code : null;
+  }, [location.search]);
 
-      if (ua.includes("android")) {
-        openStore("google");
-      } else if (ua.includes("iphone") || ua.includes("ipad")) {
-        openStore("apple");
-      }
-    }
-  }, []);
+  if (referralCode) {
+    return <ReferralRedirect referralCode={referralCode} />;
+  }
 
   return (
     <>

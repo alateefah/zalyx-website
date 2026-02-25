@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["2J43PY46R9.com.zalyx.ledger"],
+        "components": [
+          {
+            "/": "/",
+            "?": { "referralCode": "*" }
+          },
+          {
+            "/": "/download"
+          }
+        ]
+      }
+    ]
+  }
+}
