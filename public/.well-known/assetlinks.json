@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.zalyx.ledger",
+      "sha256_cert_fingerprints": [
+        "4A:CF:47:F5:78:46:C5:66:73:7F:CC:B4:32:A4:74:D7:FF:9F:FC:65:1C:F4:D3:6A:BF:F4:D7:7A:B9:99:52:80"
+      ]
+    }
+  }
+]
