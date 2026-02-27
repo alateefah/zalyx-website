@@ -35,9 +35,12 @@ export default function ReferralRedirect({
       return;
     }
 
+    // Copy referral code to clipboard so the app can read it after install
+    navigator.clipboard?.writeText(referralCode).catch(() => {});
+
     // Try to open the app via deep link (env-specific scheme)
     const scheme = SCHEMES[appEnv];
-    const deepLink = `${scheme}://referral?code=${encodeURIComponent(referralCode)}`;
+    const deepLink = `${scheme}://?referralCode=${encodeURIComponent(referralCode)}`;
     window.location.href = deepLink;
 
     // After 1.5s, if still here (app not installed), go to store
