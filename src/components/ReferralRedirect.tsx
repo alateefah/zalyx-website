@@ -1,12 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { STORE_LINKS, openStore } from "../utils/constants";
 
+export type AppEnv = "production" | "staging";
+
+const SCHEMES: Record<AppEnv, string> = {
+  production: "zalyxledger",
+  staging: "zalyxledger-staging",
+};
+
 /**
  * Tries to open the app via deep link with the referral code.
  * If the app isn't installed, falls back to the app store.
  * The UI only shows if both attempts fail (e.g. desktop or blocked redirect).
  */
-export default function ReferralRedirect({ referralCode }: { referralCode: string }) {
+export default function ReferralRedirect({
+  referralCode,
+  appEnv = "production",
+}: {
+  referralCode: string;
+  appEnv?: AppEnv;
+}) {
   const [showFallback, setShowFallback] = useState(false);
   const mountedRef = useRef(true);
 
@@ -22,8 +35,9 @@ export default function ReferralRedirect({ referralCode }: { referralCode: strin
       return;
     }
 
-    // Try to open the app via deep link
-    const deepLink = `zalyxledger://referral?code=${encodeURIComponent(referralCode)}`;
+    // Try to open the app via deep link (env-specific scheme)
+    const scheme = SCHEMES[appEnv];
+    const deepLink = `${scheme}://referral?code=${encodeURIComponent(referralCode)}`;
     window.location.href = deepLink;
 
     // After 1.5s, if still here (app not installed), go to store
@@ -47,7 +61,7 @@ export default function ReferralRedirect({ referralCode }: { referralCode: strin
       clearTimeout(storeTimeout);
       clearTimeout(fallbackTimeout);
     };
-  }, [referralCode]);
+  }, [referralCode, appEnv]);
 
   if (!showFallback) {
     return (

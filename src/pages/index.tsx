@@ -5,7 +5,7 @@ import { Hero } from "../components/Hero";
 import { JoinFam } from "../components/JoinFam";
 import { ProductShowcase } from "../components/ProductShowcase";
 import { WhyZalyx } from "../components/WhyZalyx";
-import ReferralRedirect from "../components/ReferralRedirect";
+import ReferralRedirect, { AppEnv } from "../components/ReferralRedirect";
 import { useLocation } from "react-router-dom";
 import { useMemo } from "react";
 
@@ -16,14 +16,18 @@ function isReferralCode(value: string): boolean {
 export default function LandingPage() {
   const location = useLocation();
 
-  const referralCode = useMemo(() => {
+  const { referralCode, appEnv } = useMemo(() => {
     const params = new URLSearchParams(location.search);
     const code = params.get("referralCode")?.trim().toUpperCase();
-    return code && isReferralCode(code) ? code : null;
+    const env = params.get("env")?.trim().toLowerCase();
+    return {
+      referralCode: code && isReferralCode(code) ? code : null,
+      appEnv: env === "staging" ? "staging" : "production",
+    };
   }, [location.search]);
 
   if (referralCode) {
-    return <ReferralRedirect referralCode={referralCode} />;
+    return <ReferralRedirect referralCode={referralCode} appEnv={appEnv as AppEnv} />;
   }
 
   return (
