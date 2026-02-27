@@ -5,6 +5,7 @@
 
 export const STORE_LINKS = {
   GOOGLE_PLAY: "https://play.google.com/store/apps/details?id=com.zalyx.ledger",
+  GOOGLE_PLAY_STAGING: "https://play.google.com/store/apps/details?id=com.zalyx.ledger.staging",
   APP_STORE: "https://apps.apple.com/us/app/zalyx-ledger/id6756923647",
 } as const;
 
@@ -19,19 +20,26 @@ export const CONTACT = {
   EMAIL_LINK: "mailto:support@zalyx.io",
 } as const;
 
+const PACKAGE_IDS = {
+  production: "com.zalyx.ledger",
+  staging: "com.zalyx.ledger.staging",
+} as const;
+
 /**
  * Helper function to open store (defaults to Play Store, with fallback to App Store)
  */
-export const openStore = (store: "google" | "apple" = "google") => {
-  const url = store === "apple" ? STORE_LINKS.APP_STORE : STORE_LINKS.GOOGLE_PLAY;
-  
+export const openStore = (store: "google" | "apple" = "google", env: "production" | "staging" = "production") => {
+  const packageId = PACKAGE_IDS[env];
+  const playUrl = `https://play.google.com/store/apps/details?id=${packageId}`;
+  const url = store === "apple" ? STORE_LINKS.APP_STORE : playUrl;
+
   // Use intent URL for Android (bypasses in-app browser blocking)
   if (store === "google") {
-    const intentUrl = "intent://details?id=com.zalyx.ledger#Intent;scheme=market;action=android.intent.action.VIEW;package=com.android.vending;S.browser_fallback_url=" + encodeURIComponent(url) + ";end";
+    const intentUrl = `intent://details?id=${packageId}#Intent;scheme=market;action=android.intent.action.VIEW;package=com.android.vending;S.browser_fallback_url=${encodeURIComponent(url)};end`;
     window.location.href = intentUrl;
     return;
   }
-  
+
   // For iOS, direct location change works better than window.open
   window.location.href = url;
 };

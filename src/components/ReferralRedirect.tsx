@@ -43,9 +43,9 @@ export default function ReferralRedirect({
     // After 1.5s, if still here (app not installed), go to store
     const storeTimeout = setTimeout(() => {
       if (isIOS) {
-        openStore("apple");
+        openStore("apple", appEnv);
       } else {
-        openStore("google");
+        openStore("google", appEnv);
       }
     }, 1500);
 
@@ -67,6 +67,9 @@ export default function ReferralRedirect({
     return (
       <div className="min-h-screen bg-[#0b0d13] flex items-center justify-center">
         <div className="w-8 h-8 border-2 border-[#26C7C3]/30 border-t-[#26C7C3] rounded-full animate-spin" />
+        {appEnv === "staging" && (
+          <p className="absolute bottom-4 text-yellow-400 text-xs">STAGING</p>
+        )}
       </div>
     );
   }
@@ -74,6 +77,11 @@ export default function ReferralRedirect({
   // Fallback: only shows on desktop or if redirects were blocked
   return (
     <div className="min-h-screen bg-[#0b0d13] text-white flex flex-col items-center justify-center px-6">
+      {appEnv === "staging" && (
+        <span className="mb-4 px-3 py-1 bg-yellow-400/20 text-yellow-400 text-xs font-mono rounded">
+          STAGING
+        </span>
+      )}
       <img src="/zalyx-logo.png" alt="Zalyx" className="h-10 w-auto mb-8" />
       <p className="text-gray-400 mb-2 text-center">
         You've been referred to Zalyx Ledger!
@@ -85,7 +93,7 @@ export default function ReferralRedirect({
       </p>
       <div className="flex flex-col gap-3 w-full max-w-xs">
         <a
-          href={STORE_LINKS.GOOGLE_PLAY}
+          href={appEnv === "staging" ? STORE_LINKS.GOOGLE_PLAY_STAGING : STORE_LINKS.GOOGLE_PLAY}
           className="flex items-center justify-center gap-2 w-full py-4 rounded-xl text-white font-semibold"
           style={{ background: "linear-gradient(270deg, #26C7C3 0%, #8354AA 100%)" }}
         >
