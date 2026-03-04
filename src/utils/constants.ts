@@ -28,7 +28,10 @@ const PACKAGE_IDS = {
 /**
  * Helper function to open store (defaults to Play Store, with fallback to App Store)
  */
-export const openStore = (store: "google" | "apple" = "google", env: "production" | "staging" = "production") => {
+export const openStore = (
+  store: "google" | "apple" = "google",
+  env: "production" | "staging" = "production",
+) => {
   const packageId = PACKAGE_IDS[env];
   const playUrl = `https://play.google.com/store/apps/details?id=${packageId}`;
   const url = store === "apple" ? STORE_LINKS.APP_STORE : playUrl;
