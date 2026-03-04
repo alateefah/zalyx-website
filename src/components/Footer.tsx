@@ -162,8 +162,24 @@ export function Footer() {
                   {CONTACT.EMAIL}
                 </a>
               </li>
-              <li className="text-gray-400">
-                <span className="text-sm">Nigeria</span>
+              <li className="text-gray-400 flex items-start gap-2">
+                <svg
+                  className="w-4 h-4 mt-0.5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span className="text-sm">
+                  House 49, Ipent 2 Estate,
+                  <br />
+                  Lokogoma District, Abuja, Nigeria
+                </span>
               </li>
             </ul>
           </div>

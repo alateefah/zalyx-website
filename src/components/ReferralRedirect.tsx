@@ -86,13 +86,10 @@ export default function ReferralRedirect({
         </span>
       )}
       <img src="/zalyx-logo.png" alt="Zalyx" className="h-10 w-auto mb-8" />
-      <p className="text-gray-400 mb-2 text-center">
-        You've been referred to Zalyx Ledger!
-      </p>
+      <p className="text-gray-400 mb-2 text-center">You've been referred to Zalyx Ledger!</p>
       <p className="text-gray-500 text-sm mb-6 text-center">
         Download the app and enter code{" "}
-        <span className="text-[#26C7C3] font-semibold">{referralCode}</span>{" "}
-        during business setup.
+        <span className="text-[#26C7C3] font-semibold">{referralCode}</span> during business setup.
       </p>
       <div className="flex flex-col gap-3 w-full max-w-xs">
         <a
