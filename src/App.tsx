@@ -17,6 +17,7 @@ function App() {
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/field-onboarding-partner" element={<FieldOnboardingPartner />} />
         <Route path="/download" element={<DownloadRedirect />} />
+        <Route path="/update" element={<DownloadRedirect />} />
       </Routes>
     </Router>
   );
