@@ -5,6 +5,8 @@ import PrivacyPolicy from "./pages/privacy";
 import TermsAndConditions from "./pages/terms";
 import LandingPage from "./pages";
 import FieldOnboardingPartner from "./pages/field-onboarding-partner";
+import GrowthMarketingOfficer from "./pages/growth-marketing-officer";
+import Careers from "./pages/careers";
 import DownloadRedirect from "./components/DownloadRedirect";
 
 function App() {
@@ -15,7 +17,9 @@ function App() {
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsAndConditions />} />
-        <Route path="/field-onboarding-partner" element={<FieldOnboardingPartner />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/careers/field-onboarding-partner" element={<FieldOnboardingPartner />} />
+        <Route path="/careers/growth-marketing-officer" element={<GrowthMarketingOfficer />} />
         <Route path="/download" element={<DownloadRedirect />} />
         <Route path="/update" element={<DownloadRedirect />} />
       </Routes>

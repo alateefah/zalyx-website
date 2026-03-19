@@ -7,6 +7,7 @@ export function Footer() {
     { label: "Home", href: "/" },
     { label: "Products", href: "/#products" },
     { label: "FAQs", href: "/#faq" },
+    { label: "Careers", href: "/careers" },
   ];
 
   const legalLinks = [
