@@ -38,7 +38,7 @@ export default function LandingPage() {
           name="description"
           content="Zalyx Technologies builds simple, powerful digital tools that help African entrepreneurs manage operations, customers, and records. Download Zalyx Ledger — free forever."
         />
-        <link rel="canonical" href="https://zalyx.io/" />
+        <link rel="canonical" href="https://www.zalyx.io/" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Zalyx Technologies – Digital Tools for Entrepreneurs" />
@@ -47,7 +47,7 @@ export default function LandingPage() {
           content="Free digital tools for African entrepreneurs. Zalyx Ledger helps you track customers, orders, and payments offline and online."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zalyx.io/" />
+        <meta property="og:url" content="https://www.zalyx.io/" />
       </Helmet>
 
       <div className="bg-[#0b0d13] text-white">

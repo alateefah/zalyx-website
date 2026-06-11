@@ -11,7 +11,7 @@ export default function FieldOnboardingPartner() {
           name="description"
           content="Join Zalyx as a commission-based Field Onboarding Partner in Lagos. Help small business owners onboard and earn per activated merchant."
         />
-        <link rel="canonical" href="https://zalyx.io/careers/field-onboarding-partner" />
+        <link rel="canonical" href="https://www.zalyx.io/careers/field-onboarding-partner" />
       </Helmet>
 
       <div className="min-h-screen bg-[#0b0d13] text-white flex flex-col">
