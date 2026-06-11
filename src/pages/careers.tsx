@@ -34,7 +34,7 @@ export default function Careers() {
           name="description"
           content="Join Zalyx and help small businesses across Nigeria grow digitally. View open roles."
         />
-        <link rel="canonical" href="https://zalyx.io/careers" />
+        <link rel="canonical" href="https://www.zalyx.io/careers" />
       </Helmet>
 
       <div className="min-h-screen bg-[#0b0d13] text-white flex flex-col">

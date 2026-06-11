@@ -42,7 +42,7 @@ export default function GrowthMarketingOfficer() {
           name="description"
           content="Join Zalyx as a Growth Marketing & Partnerships Officer. Drive merchant adoption across Nigeria through field marketing, community partnerships, and onboarding."
         />
-        <link rel="canonical" href="https://zalyx.io/careers/growth-marketing-officer" />
+        <link rel="canonical" href="https://www.zalyx.io/careers/growth-marketing-officer" />
       </Helmet>
 
       <div className="min-h-screen bg-[#0b0d13] text-white flex flex-col">
