@@ -1,0 +1,14 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/Nohemi_Regular-s.p.2uqchy83usml4.woff2",
+      "static/media/Nohemi_Medium-s.p.2q19rweeymi0z.woff2",
+      "static/media/Nohemi_SemiBold-s.p.3z89mlpb7ytxx.woff2",
+      "static/media/Nohemi_Bold-s.p.1_z8o91j5osgn.woff2",
+      "static/media/Nohemi_Black-s.p.2ed20uv9g4ecj.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}

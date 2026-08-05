@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/alateefah/Documents/repos/zalyx-website/app/page.tsx"],"sourcesContent":["// Temporary: replaced by the real home page in Task 5.\nexport default function Home() {\n  return <main className=\"p-8 font-nohemi\">Zalyx</main>;\n}\n"],"names":["Home","className"],"mappings":"AAAA,uDAAuD;;;;;;;AACxC,SAASA;IACtB,qBAAO,8OAAC;QAAKC,WAAU;kBAAkB;;;;;;AAC3C"}}]
+}
