@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   // Build output, not source. The Vite config only ignored `dist`, so after the
   // Next migration lint was reporting ~176 errors from .next/ artefacts.
-  { ignores: ["dist", ".next", "out", "next-env.d.ts", "src/legacy-pages"] },
+  { ignores: [".next", "out", "next-env.d.ts"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],

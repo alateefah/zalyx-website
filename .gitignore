@@ -14,9 +14,6 @@ node_modules
 out/
 next-env.d.ts
 
-# Vite leftovers (kept until the dist/ directory is deleted)
-dist
-dist-ssr
 *.local
 
 # Vercel
