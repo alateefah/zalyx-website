@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title: 'Growth Marketing & Partnerships Officer – Nigeria | Zalyx',
   description:
     'Join Zalyx as a Growth Marketing & Partnerships Officer. Drive merchant adoption across Nigeria through field marketing, community partnerships, and onboarding.',
-  alternates: { canonical: 'https://www.zalyx.io/careers/growth-marketing-officer' },
+  alternates: { canonical: '/careers/growth-marketing-officer' },
 };
 
 export default function GrowthMarketingOfficer() {

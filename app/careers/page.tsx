@@ -29,7 +29,10 @@ export const metadata: Metadata = {
   title: 'Careers – Zalyx Technologies',
   description:
     'Join Zalyx and help small businesses across Nigeria grow digitally. View open roles.',
-  alternates: { canonical: 'https://www.zalyx.io/careers' },
+  // Relative, so metadataBase renders it against the apex like every other
+  // page. It was hardcoded to www, which contradicted the rest of the site and
+  // split the ranking signal between two hosts serving identical content.
+  alternates: { canonical: '/careers' },
 };
 
 export default function Careers() {

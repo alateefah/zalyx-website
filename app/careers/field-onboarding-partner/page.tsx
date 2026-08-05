@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Field Onboarding Partner (Commission-Based) – Lagos | Zalyx',
   description:
     'Join Zalyx as a commission-based Field Onboarding Partner in Lagos. Help small business owners onboard and earn per activated merchant.',
-  alternates: { canonical: 'https://www.zalyx.io/careers/field-onboarding-partner' },
+  alternates: { canonical: '/careers/field-onboarding-partner' },
 };
 
 export default function FieldOnboardingPartner() {
