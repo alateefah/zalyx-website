@@ -29,3 +29,6 @@ next-env.d.ts
 *.njsproj
 *.sln
 *.sw?
+
+# TypeScript incremental build cache — a build artefact, not source.
+*.tsbuildinfo
