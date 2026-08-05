@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { nohemi } from './fonts';
 import { SITE_URL } from '@/lib/siteUrl';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,7 +20,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={nohemi.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Sets no cookie, so it needs no consent banner — and it answers the
+            only question that matters after publishing: did anyone read it. */}
+        <Analytics />
+      </body>
     </html>
   );
 }
