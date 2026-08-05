@@ -32,7 +32,9 @@ One Next App Router project. Everything statically generated at build.
 
 ```
 zalyx.io/
-├── /                          marketing home (ported first, revamped last)
+├── /                          company home: who Zalyx is, both halves, proof
+├── /ledger                    keep your books — the product page
+├── /marketplace               get found — the product page
 ├── /download  /update         route handlers, 302 by user agent
 ├── /privacy  /terms           ported as-is
 ├── /careers                   + /careers/field-onboarding-partner
@@ -99,12 +101,36 @@ If drift becomes a real problem, the natural next step is a build warning when `
 
 ## Content plan
 
-### Marketing revamp
+### Marketing pages
 
-- Hero reframed on the two things being sold: **keep your books, and get found**
-- One section per pillar: record sales (incl. walk-ins) · track who owes you · your storefront on the marketplace · expenses and reports · staff
-- FAQ kept, but answers now covered properly in `/help` link there instead
-- Footer gains **Help**, **Blog**, **What's new**
+**Positioning: one product, two halves.** Zalyx Ledger keeps your books and gets you
+found. The marketplace is not a second product — no separate account, no separate data,
+no separate business model; it is the merchant's own ledger data shown to customers.
+Framing it as a peer product would commit us publicly to a second product line while the
+roadmap says Payments is next, and would push the ledger — which Payments and Capital
+both depend on — into the background of our own site.
+
+One long homepage cannot carry this. A single page has one title and one description, so
+everything competes for the same metadata and ranks for nothing specific, and a merchant
+asking "does it track expenses?" has to scroll and guess.
+
+| page | job | roughly |
+|---|---|---|
+| `/` | who Zalyx is, both halves in a paragraph each, proof, download | short; routes you onward |
+| `/ledger` | record sales incl. walk-ins · who owes you · payments · expenses · reports · staff | the bigger page, stronger placement |
+| `/marketplace` | storefront · WhatsApp contact · how customers find you · what it takes to appear | shorter, links to `/help/set-up-your-storefront` |
+
+Each gets its own title, description and canonical — the point of splitting them.
+
+`ProductShowcase`, `WhyZalyx` and most of `FAQs` move to `/ledger` rather than being
+rewritten. The FAQ keeps its commercial questions (is it free, how does Zalyx make money)
+because those belong on a marketing page; `/help` answers how to do things.
+
+Footer gains **Ledger**, **Marketplace**, **Help**, **Blog**, **What's new**.
+
+Structured so per-feature pages (`/ledger/expenses`) and business-type pages
+(`/for/tailors`) can be added later without moving anything. Not now — that is a lot of
+pages to keep true, and the content has to earn it first.
 
 ### `/help` — 12 pages, five topics
 
