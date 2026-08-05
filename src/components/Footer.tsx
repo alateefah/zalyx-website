@@ -5,7 +5,8 @@ export function Footer() {
 
   const quickLinks = [
     { label: "Home", href: "/" },
-    { label: "Products", href: "/#products" },
+    { label: "Ledger", href: "/ledger" },
+    { label: "Marketplace", href: "/marketplace" },
     // Internal links are how crawlers find the content pages at all, and how a
     // visitor who scrolled to the bottom looking for answers gets to them.
     { label: "Help", href: "/help" },
