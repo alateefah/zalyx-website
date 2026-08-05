@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ReferralRedirect, { AppEnv } from '@/src/components/ReferralRedirect';
+import { organizationJsonLd, jsonLdString } from '@/lib/seo';
 import { Hero } from '@/src/components/Hero';
 import { WhyZalyx } from '@/src/components/WhyZalyx';
 import { ProductShowcase } from '@/src/components/ProductShowcase';
@@ -47,6 +48,12 @@ export default async function Home({
 
   return (
     <>
+      {/* Only on the home page: Organization describes the company itself, so
+          repeating it per route would assert it many times over. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdString(organizationJsonLd()) }}
+      />
       <Hero />
       <WhyZalyx />
       <ProductShowcase />
