@@ -1,4 +1,6 @@
-import React, { useState, FormEvent } from "react";
+'use client';
+
+import React, { useState, FormEvent } from 'react';
 
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSfOqz-1i6PwVuc9Y8b4s4kCkNE8OFpTCjDohMASg9Oth0PQfA/formResponse";
