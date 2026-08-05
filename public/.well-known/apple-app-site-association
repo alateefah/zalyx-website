@@ -12,7 +12,8 @@
             "?": { "referralCode": "*" }
           },
           {
-            "/": "/download"
+            "/": "/",
+            "?": { "inviteCode": "*" }
           }
         ]
       }
