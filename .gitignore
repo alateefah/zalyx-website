@@ -8,9 +8,19 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+
+# Vite leftovers (kept until the dist/ directory is deleted)
 dist
 dist-ssr
 *.local
+
+# Vercel
+.vercel
 
 # Editor directories and files
 .vscode/*
