@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { listHelpPages, HELP_TOPICS } from '@/lib/content';
+import { SiteHeader } from '@/src/components/SiteHeader';
 import { Footer } from '@/src/components/Footer';
+import { HelpSearch } from '@/src/components/help/HelpSearch';
 
 export const metadata: Metadata = {
   title: 'Help — Zalyx',
@@ -15,39 +16,14 @@ export default async function HelpIndex() {
 
   return (
     <>
-      <main className="mx-auto max-w-3xl px-6 py-16 md:px-8">
-        <h1 className="mb-2 text-3xl font-semibold text-gray-900">Help</h1>
-        <p className="mb-10 text-gray-600">
-          Short guides for getting things done in Zalyx Ledger.
+      <SiteHeader />
+      <main className="mx-auto w-full max-w-[860px] px-6 pt-11 pb-16 sm:px-10 md:px-16">
+        <h1 className="font-nohemi text-4xl font-medium tracking-tight text-white light:text-[#0A0C14]">Help</h1>
+        <p className="mt-2.5 max-w-[60ch] text-base text-white/70 light:text-[#0A0C14]/70">
+          Short guides for everything in the app. If you cannot find it, message us on WhatsApp.
         </p>
 
-        {HELP_TOPICS.map((topic) => {
-          const inTopic = pages.filter((p) => p.topic === topic.id);
-          // A topic with no pages yet renders nothing, so the index never shows
-          // an empty heading while the content is still being written.
-          if (inTopic.length === 0) return null;
-
-          return (
-            <section key={topic.id} className="mb-10">
-              <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-gray-500">
-                {topic.label}
-              </h2>
-              <ul className="divide-y divide-gray-100 rounded-xl border border-gray-200">
-                {inTopic.map((page) => (
-                  <li key={page.slug}>
-                    <Link
-                      href={`/help/${page.slug}`}
-                      className="block px-4 py-3 hover:bg-gray-50"
-                    >
-                      <span className="font-medium text-gray-900">{page.title}</span>
-                      <span className="block text-sm text-gray-500">{page.summary}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          );
-        })}
+        <HelpSearch topics={HELP_TOPICS} pages={pages} />
       </main>
       <Footer />
     </>

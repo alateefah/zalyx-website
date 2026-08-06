@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import ReferralRedirect, { AppEnv } from '@/src/components/ReferralRedirect';
 import { organizationJsonLd, jsonLdString } from '@/lib/seo';
-import Link from 'next/link';
-import { Hero } from '@/src/components/Hero';
-import { JoinFam } from '@/src/components/JoinFam';
+import { SiteHeader } from '@/src/components/SiteHeader';
+import { HomeHero } from '@/src/components/HomeHero';
+import { OurProduct } from '@/src/components/OurProduct';
+import { HomeProof } from '@/src/components/HomeProof';
 import { Footer } from '@/src/components/Footer';
 
 export const metadata: Metadata = {
@@ -52,47 +53,10 @@ export default async function Home({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdString(organizationJsonLd()) }}
       />
-      <Hero />
-
-      {/* Home routes rather than explains. The long product scroll moved to
-          /ledger, where it gets its own title and description instead of
-          competing with everything else for the home page's. */}
-      <section className="mx-auto max-w-5xl px-6 py-16 md:px-8">
-        <div className="grid gap-6 sm:grid-cols-2">
-          <Link
-            href="/ledger"
-            className="group rounded-2xl border border-gray-200 p-6 transition-colors hover:border-[#8354AA]"
-          >
-            <h2 className="mb-2 text-xl font-semibold text-gray-900 group-hover:text-[#8354AA]">
-              Keep your books
-            </h2>
-            <p className="text-gray-600">
-              Record sales, know who owes you, track what you spend. Works offline.
-            </p>
-            <span className="mt-3 inline-block text-sm text-[#8354AA]">
-              Zalyx Ledger →
-            </span>
-          </Link>
-
-          <Link
-            href="/marketplace"
-            className="group rounded-2xl border border-gray-200 p-6 transition-colors hover:border-[#8354AA]"
-          >
-            <h2 className="mb-2 text-xl font-semibold text-gray-900 group-hover:text-[#8354AA]">
-              Get found
-            </h2>
-            <p className="text-gray-600">
-              Turn on your storefront and customers nearby can find you and message
-              you on WhatsApp.
-            </p>
-            <span className="mt-3 inline-block text-sm text-[#8354AA]">
-              Zalyx Marketplace →
-            </span>
-          </Link>
-        </div>
-      </section>
-
-      <JoinFam />
+      <SiteHeader />
+      <HomeHero />
+      <OurProduct />
+      <HomeProof />
       <Footer />
     </>
   );

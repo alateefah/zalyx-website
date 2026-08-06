@@ -18,6 +18,8 @@ export const HELP_TOPICS = [
   { id: 'customers', label: 'Customers' },
   { id: 'catalogue', label: 'Your catalogue' },
   { id: 'money', label: 'Money' },
+  { id: 'reports-staff', label: 'Reports & staff' },
+  { id: 'marketplace', label: 'Marketplace' },
 ] as const;
 
 export type HelpMeta = {

@@ -1,98 +1,65 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ProductShowcase } from '@/src/components/ProductShowcase';
-import { WhyZalyx } from '@/src/components/WhyZalyx';
-import { FAQ } from '@/src/components/FAQs';
+import { SiteHeader } from '@/src/components/SiteHeader';
 import { Footer } from '@/src/components/Footer';
+import { TradingDay } from '@/src/components/ledger/TradingDay';
+import { LedgerFAQ } from '@/src/components/ledger/LedgerFAQ';
+import { STORE_LINKS } from '@/src/utils/constants';
 
 export const metadata: Metadata = {
-  title: 'Zalyx Ledger — know who owes you, and what you made',
+  title: 'Zalyx Ledger — your whole trading day, written down',
   description:
-    'Record sales in seconds, track who owes you money, log expenses and see what your business made. Works offline. Free.',
+    'Record sales in three taps, track debts and part payments, watch expenses, and close the day with a report. Offline. Free.',
   alternates: { canonical: '/ledger' },
 };
-
-// What the ledger actually does, in the order a merchant meets it. Each links to
-// the guide for that job — the product page says why, /help says how.
-const CAPABILITIES = [
-  {
-    title: 'Record a sale in seconds',
-    body: 'Pick from your catalogue or type it in. No customer details needed for a walk-in — a market sale is two taps.',
-    href: '/help/record-a-sale',
-    linkLabel: 'How to record a sale',
-  },
-  {
-    title: 'Know who owes you',
-    body: 'Every credit sale carries what was paid and when the rest is due, so the outstanding total is a fact rather than a guess.',
-    href: '/blog/who-owes-you-money',
-    linkLabel: 'Why this matters',
-  },
-  {
-    title: 'Take payments as they come',
-    body: 'Full, part payment or nothing yet. Record what was actually handed over and the balance keeps itself up to date.',
-  },
-  {
-    title: 'Track what you spend',
-    body: 'Log expenses alongside sales, so what you made is the real number and not just what came in.',
-  },
-  {
-    title: 'See the month at a glance',
-    body: 'Reports and customer statements you can share — what came in, what went out, who is still owing.',
-  },
-  {
-    title: 'Work with your staff',
-    body: 'Invite the people who help you run the shop, and see what was recorded without handing over your phone.',
-  },
-];
 
 export default function LedgerPage() {
   return (
     <>
-      <main>
-        <section className="mx-auto max-w-5xl px-6 pt-16 md:px-8">
-          <p className="mb-3 text-sm font-bold uppercase tracking-wider text-[#8354AA]">
-            Zalyx Ledger
-          </p>
-          <h1 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-[2.5rem] sm:leading-[1.15]">
-            Know who owes you, and what you made
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-gray-600">
-            A record of every sale, payment and expense — kept on your phone, working
-            with or without network, and free to use.
-          </p>
+      <SiteHeader />
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {CAPABILITIES.map((c) => (
-              <div key={c.title} className="rounded-2xl border border-gray-200 p-5">
-                <h2 className="mb-2 text-lg font-semibold text-gray-900">{c.title}</h2>
-                <p className="text-gray-600">{c.body}</p>
-                {c.href && (
-                  <Link
-                    href={c.href}
-                    className="mt-3 inline-block text-sm text-[#8354AA] underline hover:no-underline"
-                  >
-                    {c.linkLabel}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
+      <section className="px-6 pt-11 pb-8 sm:px-10 md:px-16 lg:px-24 2xl:px-[200px]">
+        <span className="inline-flex rounded-full border border-[#26C7C3] px-3 py-1 text-xs font-medium text-[#26C7C3]">
+          Zalyx Ledger
+        </span>
+        <h1 className="font-nohemi mt-4 max-w-[22ch] text-4xl font-medium leading-[1.08] tracking-tight text-white [text-wrap:balance] sm:text-5xl light:text-[#0A0C14]">
+          Your whole trading day, written down.
+        </h1>
+        <p className="mt-4 max-w-[52ch] text-[17px] text-white/70 light:text-[#0A0C14]/70">
+          Follow one day in a shop: the first sale, the walk-in, the customer who pays
+          half, and closing up.
+        </p>
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <a
+            href={STORE_LINKS.GOOGLE_PLAY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-nohemi inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white"
+            style={{ background: 'linear-gradient(120deg, #26C7C3, #8354AA)' }}
+          >
+            Get the app
+          </a>
+          <span className="flex flex-wrap items-center gap-3.5 text-[13px] text-white/60 light:text-[#0A0C14]/60">
+            <span className="inline-flex items-center gap-1.5">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+                <path d="M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01" />
+                <line x1="1" y1="1" x2="23" y2="23" />
+              </svg>
+              Works offline
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.25L4 3a1 1 0 0 0-1 1l.25 5.59a2 2 0 0 0 .58 1.41l9.58 9.59a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.83Z" />
+                <circle cx="8" cy="8" r="1.5" />
+              </svg>
+              Free
+            </span>
+          </span>
+        </div>
+      </section>
 
-          <p className="mt-10 text-gray-600">
-            Selling to customers who have not found you yet?{' '}
-            <Link href="/marketplace" className="text-[#8354AA] underline hover:no-underline">
-              Your storefront on the Zalyx marketplace
-            </Link>{' '}
-            comes with the same app.
-          </p>
-        </section>
+      <TradingDay />
+      <LedgerFAQ />
 
-        {/* These were written about the ledger and lived on the home page, where
-            they competed with everything else for one title and description. */}
-        <ProductShowcase />
-        <WhyZalyx />
-        <FAQ />
-      </main>
       <Footer />
     </>
   );
