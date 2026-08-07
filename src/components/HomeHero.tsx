@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { STORE_LINKS } from '@/src/utils/constants';
+import { SmartAppLink } from '@/src/components/SmartAppLink';
 
 /**
  * Home page hero, on the dark ground the careers pages already established as
@@ -34,7 +34,7 @@ export function HomeHero() {
             gap wedged between the two. */}
         <div className="w-full min-w-0 md:max-w-[600px] md:flex-none">
           <span className="inline-flex rounded-full border border-[#26C7C3] px-3 mb-8 mt-4 py-2 text-xs font-medium text-[#26C7C3]">
-            Powering Africa&apos;s everyday businesses
+            Powering everyday businesses in Nigeria &amp; The Gambia
           </span>
 
           <h1 className="font-nohemi mt-5 max-w-2xl text-5xl font-medium leading-[1.05] tracking-tight text-white [text-wrap:balance] sm:text-6xl light:text-[#0A0C14]">
@@ -59,14 +59,9 @@ export function HomeHero() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
-            <a
-              href={STORE_LINKS.GOOGLE_PLAY}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-4 py-3 text-sm font-medium text-white hover:bg-white/5 light:border-black/15 light:text-[#0A0C14] light:hover:bg-black/5"
-            >
+            <SmartAppLink className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-4 py-3 text-sm font-medium text-white hover:bg-white/5 light:border-black/15 light:text-[#0A0C14] light:hover:bg-black/5">
               Get Zalyx Ledger
-            </a>
+            </SmartAppLink>
           </div>
 
           <div className="mt-9 flex items-center gap-2.5 text-[13px] text-white/60 light:text-[#0A0C14]/60">

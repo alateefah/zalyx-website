@@ -4,7 +4,7 @@ import { Footer } from '@/src/components/Footer';
 import { TradingDay } from '@/src/components/ledger/TradingDay';
 import { BuiltForYourTrade } from '@/src/components/ledger/BuiltForYourTrade';
 import { LedgerFAQ } from '@/src/components/ledger/LedgerFAQ';
-import { STORE_LINKS } from '@/src/utils/constants';
+import { SmartAppLink } from '@/src/components/SmartAppLink';
 
 export const metadata: Metadata = {
   title: 'Zalyx Ledger — your whole trading day, written down',
@@ -30,15 +30,12 @@ export default function LedgerPage() {
           half, and closing up.
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-4">
-          <a
-            href={STORE_LINKS.GOOGLE_PLAY}
-            target="_blank"
-            rel="noopener noreferrer"
+          <SmartAppLink
             className="font-nohemi inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-white"
             style={{ background: 'linear-gradient(120deg, #26C7C3, #8354AA)' }}
           >
             Get the app
-          </a>
+          </SmartAppLink>
           <span className="flex flex-wrap items-center gap-3.5 text-[13px] text-white/60 light:text-[#0A0C14]/60">
             <span className="inline-flex items-center gap-1.5">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>

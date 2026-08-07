@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { STORE_LINKS } from '@/src/utils/constants';
 import { ThemeToggle } from '@/src/components/ThemeToggle';
+import { SmartAppLink } from '@/src/components/SmartAppLink';
 
 /**
  * Sticky nav across every page. Dark ground with a blurred backdrop, matching
@@ -60,14 +60,9 @@ export function SiteHeader() {
 
         <ThemeToggle />
 
-        <a
-          href={STORE_LINKS.GOOGLE_PLAY}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex flex-none items-center gap-1.5 rounded-lg border border-[#26C7C3] px-3.5 py-1.5 text-sm font-medium text-[#26C7C3] transition-colors hover:bg-[#26C7C3]/10"
-        >
+        <SmartAppLink className="inline-flex flex-none items-center gap-1.5 rounded-lg border border-[#26C7C3] px-3.5 py-1.5 text-sm font-medium text-[#26C7C3] transition-colors hover:bg-[#26C7C3]/10">
           Get the app
-        </a>
+        </SmartAppLink>
       </nav>
     </header>
   );

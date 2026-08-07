@@ -79,6 +79,9 @@ export function Footer() {
               Zalyx Technologies builds digital tools that help African entrepreneurs stay
               organized, understand their numbers, and grow with confidence.
             </p>
+            <p className="mt-2 max-w-[36ch] text-[13px] text-white/55 light:text-[#0A0C14]/55">
+              Live in Nigeria 🇳🇬 and The Gambia 🇬🇲
+            </p>
 
             <div className="mt-4 flex flex-wrap gap-2.5">
               <a
