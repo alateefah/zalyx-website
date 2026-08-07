@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { SiteHeader } from '@/src/components/SiteHeader';
 import { Footer } from '@/src/components/Footer';
 import { StorefrontDemo } from '@/src/components/marketplace/StorefrontDemo';
+import { MARKETPLACE_URL } from '@/src/utils/constants';
 
 export const metadata: Metadata = {
   title: 'Zalyx Marketplace — get found by customers nearby',
@@ -55,6 +56,17 @@ export default function MarketplacePage() {
             Set up a storefront, list what you sell, and let shoppers in your city find you. They
             message you on WhatsApp — no new inbox to learn.
           </p>
+          <a
+            href={MARKETPLACE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-1.5 text-sm text-[#26C7C3] hover:underline"
+          >
+            Browse Zalyx Marketplace
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
         </div>
       </section>
 

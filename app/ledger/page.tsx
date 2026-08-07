@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { SiteHeader } from '@/src/components/SiteHeader';
 import { Footer } from '@/src/components/Footer';
 import { TradingDay } from '@/src/components/ledger/TradingDay';
+import { BuiltForYourTrade } from '@/src/components/ledger/BuiltForYourTrade';
 import { LedgerFAQ } from '@/src/components/ledger/LedgerFAQ';
 import { STORE_LINKS } from '@/src/utils/constants';
 
@@ -58,6 +59,7 @@ export default function LedgerPage() {
       </section>
 
       <TradingDay />
+      <BuiltForYourTrade />
       <LedgerFAQ />
 
       <Footer />

@@ -1,8 +1,10 @@
 /**
  * Stats band + "Why Zalyx" cards + the one merchant testimonial the design
- * carries. The stats are still placeholders per the design's own copy —
- * shown with that disclaimer rather than invented figures presented as real.
- * Swap in verified numbers (or drop the band) once they exist.
+ * carries. Active users and transactions tracked are real, pulled from
+ * production on 2026-08-06 (886 businesses with an active owner; ₦370.4m
+ * across 1,426 non-cancelled NGN orders — Order.price is stored in kobo).
+ * App store rating is still the design's placeholder value — unverified,
+ * update once there's a real one.
  */
 
 const REASONS = [
@@ -43,14 +45,10 @@ function ReasonIcon({ name }: { name: string }) {
   );
 }
 
-/**
- * Nohemi doesn't cover ₦ or ★ — same missing-glyph problem as the button
- * arrows. `unit` renders in the body font (which does have them) instead of
- * forcing everything through Nohemi.
- */
+
 const STATS: { prefix?: string; value: string; suffix?: string; label: string }[] = [
-  { value: '800+', label: 'Active users' },
-  { prefix: '₦', value: '2.1b', label: 'Transactions tracked' },
+  { value: '880+', label: 'Active users' },
+  { prefix: '₦', value: '370.4m', label: 'Transactions tracked' },
   { value: '4.9', suffix: '★', label: 'App store rating' },
   { value: 'Free', label: 'Forever, for the ledger' },
 ];

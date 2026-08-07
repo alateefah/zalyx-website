@@ -16,28 +16,28 @@ const DAY = [
     title: 'Open up',
     body: 'Yesterday closed itself. The report is waiting, and so is the list of who still owes you.',
     guideLabel: 'Guide: read your daily report',
-    guideHref: '/help',
+    guideHref: '/help/read-your-daily-report',
   },
   {
     time: '11a',
     title: 'A walk-in buys two metres',
     body: 'No name, no phone number, no problem. Amount in, sale recorded, next customer.',
     guideLabel: 'Guide: record a walk-in sale',
-    guideHref: '/help/record-a-sale',
+    guideHref: '/help/walk-in-sale',
   },
   {
     time: '2p',
     title: 'Mrs Bello pays half',
     body: 'Take ₦2,000 now and the ledger carries the rest as a balance in her name.',
     guideLabel: 'Guide: take a part payment',
-    guideHref: '/help',
+    guideHref: '/help/take-a-part-payment',
   },
   {
     time: '6p',
     title: 'Close up',
     body: 'Sales, expenses and profit for the day — and a reminder you can send to the people still owing.',
     guideLabel: 'Guide: send a payment reminder',
-    guideHref: '/help',
+    guideHref: '/help/send-a-payment-reminder',
   },
 ];
 
@@ -52,7 +52,7 @@ export function TradingDay() {
 
   const owed = Math.max(amount - paid, 0);
   const custLabel = walkin ? 'Walk-in' : 'Mrs Bello';
-  const statusLabel = owed === 0 ? 'Paid in full' : paid > 0 ? 'Part paid' : 'Unpaid';
+  const statusLabel = owed === 0 ? 'Paid' : paid > 0 ? 'Partial' : 'Unpaid';
 
   return (
     <section className="mx-auto w-full px-6 pt-2 pb-10 sm:px-10 md:px-16 lg:px-24 2xl:px-[200px]">

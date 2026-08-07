@@ -9,6 +9,8 @@ export const STORE_LINKS = {
   APP_STORE: "https://apps.apple.com/us/app/zalyx-ledger/id6756923647",
 } as const;
 
+export const MARKETPLACE_URL = "https://marketplace.zalyx.io";
+
 export const SOCIAL_LINKS = {
   INSTAGRAM: "https://instagram.com/zalyx.io",
   LINKEDIN: "https://www.linkedin.com/company/zalyx-technologies/",

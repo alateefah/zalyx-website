@@ -5,11 +5,15 @@ import { useState } from 'react';
 const FAQS = [
   {
     q: 'Is it really free?',
-    a: 'Zalyx Ledger is free to use — no trial, no card, and no limit on how many sales you record.',
+    a: 'Yes — completely. Track unlimited sales, customers and payments at no cost, no trial, no card required. Core features will always be free.',
   },
   {
     q: 'Does it work without data?',
-    a: 'Yes. Sales, debts and expenses save on your phone and sync when you have a connection again.',
+    a: 'Yes. Record sales, debts and expenses offline and everything saves on your phone first — it syncs automatically once you’re back online, so your data is always there even on a weak network.',
+  },
+  {
+    q: 'How does payment tracking work?',
+    a: 'Record what a customer ordered, the total price, and how much they’ve paid. Zalyx works out the balance automatically and lets you send a WhatsApp reminder with one tap when it’s due.',
   },
   {
     q: 'Can my staff use it?',
