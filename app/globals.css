@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Two faces, one job each. Nohemi (wide, geometric) carries headlines and is
+ * applied per-element via the `font-nohemi` Tailwind class; Satoshi (the same
+ * face the mobile app and marketplace use) is the default body face, so
+ * paragraphs of help-page and blog text stay easy to read and the site looks
+ * like the same company as the app.
+ */
+html {
+  /* Decorative gradient blobs across the site (Footer, WhyZalyx, careers pages)
+     are deliberately larger than the viewport and centered with a transform, so
+     they overflow their own section on narrow screens by design. Several of
+     those sections rely on their own `overflow-hidden` to contain that, but a
+     future decoration that forgets it — or a new component that never got
+     one — should not be able to widen the whole document and put every
+     section's text into horizontal-scroll territory. This is the backstop. */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-satoshi), sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+  background: #0b0d13;
+  color: #f1fdff;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Same light values the design source itself defines for [data-theme="light"]
+   — reused here as the `.light` class body ground everything else sits on. */
+html.light body {
+  background: #f1fdff;
+  color: #0a0c14;
+}
+
+/* The brand gradient, one CSS variable so it is written once. #26C7C3 -> #8354AA
+   is used 77 times across the pre-migration site; it stays the single accent
+   moment per page rather than decorating every border and button. */
+:root {
+  --zx-grad: linear-gradient(120deg, #26c7c3, #8354aa);
+
+  /* Card/surface fills used inside inline `style` (the careers gradient-outline
+     trick needs two literal color stops, so it can't take a `light:` className
+     directly) — reads these instead, and the .light override below flips them. */
+  --zx-card: #111524;
+  --zx-card-tint: #0e3534;
+}
+html.light {
+  --zx-card: #ffffff;
+  --zx-card-tint: #eafaf9;
+}
+
+.zx-grad-text {
+  background: var(--zx-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Guide steps (help/[slug] MDX numbered lists) — the design's numbered-circle
+   pattern, done with a real <ol> and CSS counters rather than JS, so it stays
+   a semantic list for screen readers. */
+.mdx-content ol {
+  counter-reset: step;
+}
+.mdx-content ol > li {
+  /* Not display:flex — mixed text + <strong> inline content inside a flex
+     container becomes multiple anonymous flex items (one per text run and
+     per element), which lays each bold word out as its own column instead
+     of wrapping as one paragraph. Absolute-positioned circle avoids that. */
+  counter-increment: step;
+  position: relative;
+  padding-left: 40px;
+}
+.mdx-content ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  background: color-mix(in srgb, #26c7c3 26%, #0b0d13);
+  color: #7fdedb;
+}
+html.light .mdx-content ol > li::before {
+  background: #eafaf9;
+  color: #178482;
+}

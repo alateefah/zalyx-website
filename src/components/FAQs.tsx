@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 import { STORE_LINKS, CONTACT } from "../utils/constants";
 
@@ -238,7 +240,9 @@ export function FAQ() {
           style={{ transitionDelay: "500ms" }}
         >
           <h3 className="text-xl font-semibold mb-2">Still have questions?</h3>
-          <p className="text-gray-400 mb-6">Our team is here to help you get started</p>
+          <p className="text-gray-400 mb-6">
+            Read the step-by-step guides, or ask us directly
+          </p>
           <a
             href="mailto:support@zalyx.io"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105"
@@ -257,6 +261,16 @@ export function FAQ() {
               <polyline points="22,6 12,13 2,6" />
             </svg>
             Contact Support
+          </a>
+
+          {/* Ahead of email in the visual order on purpose: most questions here
+              are "how do I do X", which a guide answers immediately and a
+              support thread answers tomorrow. */}
+          <a
+            href="/help"
+            className="ml-3 inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 font-semibold text-white transition-colors duration-300 hover:border-[#26C7C3] hover:text-[#26C7C3]"
+          >
+            Read the guides
           </a>
         </div>
       </div>
