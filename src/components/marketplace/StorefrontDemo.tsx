@@ -15,7 +15,7 @@ const CONDS: { key: Key; label: string; note: string }[] = [
   { key: 'storefront', label: 'Storefront turned on', note: 'Turn your storefront on in Zalyx Marketplace.' },
   { key: 'whatsapp', label: 'A WhatsApp number', note: 'How customers reach you.' },
   { key: 'city', label: 'Your city', note: 'So nearby shoppers see you first.' },
-  { key: 'desc', label: 'A description, or one product', note: 'Something to tell people what you sell.' },
+  { key: 'desc', label: 'Add your first menu item', note: 'Something to tell people what you sell.' },
 ];
 
 function CheckCircleIcon() {
