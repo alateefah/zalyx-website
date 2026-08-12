@@ -100,3 +100,29 @@ html.light .mdx-content ol > li::before {
   background: #eafaf9;
   color: #178482;
 }
+
+/* Bulleted lists: a native `list-style` marker's glyph sits outside the box
+   model in a way utility classes (list-inside, pl-*) can't pin precisely, so
+   text ends up visibly left of headings/paragraphs above it. A fixed-position
+   dot, same trick as the numbered circles above, keeps the text's left edge
+   exactly flush with the rest of the content. */
+.mdx-content ul {
+  list-style: none;
+}
+.mdx-content ul > li {
+  position: relative;
+  padding-left: 20px;
+}
+.mdx-content ul > li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7fdedb;
+}
+html.light .mdx-content ul > li::before {
+  background: #178482;
+}

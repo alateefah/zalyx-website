@@ -50,7 +50,7 @@ export default async function HelpPage({ params }: Props) {
       />
 
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[720px] px-6 pt-9 pb-16 sm:px-10 md:px-16">
+      <main className="mx-auto w-full max-w-[860px] px-6 pt-9 pb-16 sm:px-10 md:px-16">
         <Link href="/help" className="inline-flex items-center gap-1.5 text-[13px] text-white/70 hover:text-white light:text-[#0A0C14]/70 light:hover:text-[#0A0C14]">
           <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
             <path d="M19 12H5M12 19l-7-7 7-7" />
@@ -66,7 +66,7 @@ export default async function HelpPage({ params }: Props) {
         </h1>
         <p className="mt-3 max-w-[64ch] text-base text-white/70 light:text-[#0A0C14]/70">{doc.meta.summary}</p>
 
-        <div className="mt-8">
+        <div className="mt-8 max-w-[68ch]">
           <Mdx source={doc.source} />
         </div>
 
