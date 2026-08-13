@@ -41,6 +41,8 @@ export type PostMeta = {
   /** Absent in the file means draft; such posts never reach these types. */
   published: string;
   author: string;
+  /** Optional hero image, e.g. `/blog/snap-a-sale.jpg`. Absent renders no thumbnail. */
+  image?: string;
 };
 
 export type ReleaseMeta = {
@@ -151,6 +153,7 @@ function toPostMeta(slug: string, data: Record<string, unknown>): PostMeta | nul
     summary: String(data.summary ?? ''),
     published: toDateString(data.published),
     author: String(data.author ?? 'Zalyx'),
+    image: data.image ? String(data.image) : undefined,
   };
 }
 
