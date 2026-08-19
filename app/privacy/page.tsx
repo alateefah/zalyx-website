@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
   return (
     <LegalPage
       title="Privacy Policy"
-      effectiveDate="November 11, 2025"
+      effectiveDate="August 19, 2026"
       intro={
         <>
           Zalyx Innovations &amp; Technologies Ltd. (&ldquo;Zalyx&rdquo;, &ldquo;we&rdquo;,
@@ -51,12 +51,17 @@ export default function PrivacyPolicy() {
               <li>Improve app performance and add new features</li>
               <li>Communicate updates or support</li>
               <li>Comply with applicable laws</li>
+              <li>
+                Use aggregated or hashed contact information for marketing and advertising,
+                including matching with advertising and analytics platforms to show you relevant
+                ads or to reach people with similar profiles
+              </li>
             </ul>
           ),
         },
         {
           title: '3. Sharing of information',
-          body: 'We may share data with service providers (e.g., Twilio for OTP) and authorities if required by law. We never sell or rent your data.',
+          body: 'We may share data with service providers (e.g., Twilio for OTP, and advertising or analytics platforms for hashed-contact matching) and authorities if required by law. We never sell or rent your data.',
         },
         {
           title: '4. Data retention & security',
