@@ -16,6 +16,18 @@ const FAQS = [
     a: 'Record what a customer ordered, the total price, and how much they’ve paid. Zalyx works out the balance automatically and lets you send a WhatsApp reminder with one tap when it’s due.',
   },
   {
+    q: 'Is Zalyx a free accounting app for small business?',
+    a: 'Yes. Zalyx Ledger is a free accounting and bookkeeping app for small businesses in Nigeria and The Gambia. Record sales, expenses and payments, and see your profit at the end of the day.',
+  },
+  {
+    q: 'Is it a bookkeeping app?',
+    a: 'Yes. It replaces the notebook: every sale, expense, debt and part payment is written down on your phone and kept in a report you can export.',
+  },
+  {
+    q: 'Can it remind customers who owe me?',
+    a: 'Yes. Zalyx tracks every debt and part payment, and sends a business debt reminder to the customer on WhatsApp with one tap, so you stop chasing people by hand.',
+  },
+  {
     q: 'Can my staff use it?',
     a: 'Add staff accounts and choose what each person can see and do.',
   },
