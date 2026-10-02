@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     'debt tracker app',
     'sales record app',
   ],
+  alternates: { canonical: '/' },
 };
 
 // Exactly the pattern the old landing page validated against. A link that does
