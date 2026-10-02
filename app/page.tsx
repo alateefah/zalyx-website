@@ -10,7 +10,23 @@ import { Footer } from '@/src/components/Footer';
 export const metadata: Metadata = {
   title: 'Zalyx Technologies – Digital Tools for African Entrepreneurs',
   description:
-    'Zalyx Technologies builds simple, powerful digital tools that help African entrepreneurs manage operations, customers, and records. Download Zalyx Ledger — free forever.',
+    'Zalyx Technologies builds digital tools for African entrepreneurs. Zalyx Ledger is our free accounting and bookkeeping app for small businesses in Nigeria and The Gambia: record sales, track expenses and send business debt reminders.',
+  keywords: [
+    'free accounting app',
+    'accounting app for small business',
+    'accounting app Nigeria',
+    'accounting app Gambia',
+    'accounting app Africa',
+    'free bookkeeping app',
+    'bookkeeping app for small business',
+    'bookkeeping app Nigeria',
+    'bookkeeping app Gambia',
+    'free booking app',
+    'business debt reminder',
+    'debt tracker app',
+    'sales record app',
+  ],
+  alternates: { canonical: '/' },
 };
 
 // Exactly the pattern the old landing page validated against. A link that does
