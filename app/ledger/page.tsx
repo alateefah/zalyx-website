@@ -7,9 +7,21 @@ import { LedgerFAQ } from '@/src/components/ledger/LedgerFAQ';
 import { SmartAppLink } from '@/src/components/SmartAppLink';
 
 export const metadata: Metadata = {
-  title: 'Zalyx Ledger — your whole trading day, written down',
+  title: 'Zalyx Ledger – Free Accounting & Bookkeeping App for Small Business',
   description:
-    'Record sales in three taps, track debts and part payments, watch expenses, and close the day with a report. Offline. Free.',
+    'Free accounting and bookkeeping app for small businesses in Nigeria and The Gambia. Record sales in three taps, track debts with automatic business debt reminders, watch expenses, and close the day with a report. Works offline.',
+  keywords: [
+    'free accounting app',
+    'free bookkeeping app',
+    'free booking app',
+    'accounting app for small business',
+    'accounting app Nigeria',
+    'accounting app Gambia',
+    'accounting app Africa',
+    'bookkeeping app Gambia',
+    'business debt reminder',
+    'debt tracker app',
+  ],
   alternates: { canonical: '/ledger' },
 };
 
@@ -26,8 +38,8 @@ export default function LedgerPage() {
           Your whole trading day, written down.
         </h1>
         <p className="mt-4 max-w-[52ch] text-[17px] text-white/70 light:text-[#0A0C14]/70">
-          Follow one day in a shop: the first sale, the walk-in, the customer who pays
-          half, and closing up.
+          A free accounting and bookkeeping app for small businesses in Nigeria and The Gambia. Follow one day in
+          a shop: the first sale, the walk-in, the customer who pays half, and closing up.
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <SmartAppLink

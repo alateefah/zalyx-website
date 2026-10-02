@@ -45,7 +45,8 @@ export function HomeHero() {
 
           <p className="mt-8 max-w-md text-[17px] text-white/70 light:text-[#0A0C14]/70">
             Zalyx Technologies builds software that simplifies how African businesses
-            operate, track their growth and get found.
+            operate, track their growth and get found. Our app, Zalyx Ledger, is a free
+            accounting and bookkeeping app for small businesses in Nigeria and The Gambia.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2.5">
