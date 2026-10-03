@@ -1,0 +1,38 @@
+version: 2
+
+updates:
+  # PRs target `stage`, not the default branch — stage is where work integrates
+  # and what Vercel deploys, so every bump gets tested there before main.
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: "stage"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Africa/Lagos"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(deps-dev)"
+    # Grouped so a quiet week is one or two PRs instead of fifteen. Majors stay
+    # ungrouped on purpose: they need reading, not batch-merging.
+    groups:
+      production:
+        dependency-type: "production"
+        update-types: ["minor", "patch"]
+      development:
+        dependency-type: "development"
+        update-types: ["minor", "patch"]
+    # These majors are migrations, not bumps (Tailwind 3 -> 4 rewrites the
+    # config and utilities). Security updates still come through: the
+    # `version-update:` prefixes only gate routine bumps.
+    ignore:
+      - dependency-name: "next"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
