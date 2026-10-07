@@ -10,7 +10,7 @@ import { Footer } from '@/src/components/Footer';
 export const metadata: Metadata = {
   title: 'Zalyx Technologies – Digital Tools for African Entrepreneurs',
   description:
-    'Zalyx Technologies builds digital tools for African entrepreneurs. Zalyx Ledger is our free accounting and bookkeeping app for small businesses in Nigeria and The Gambia: record sales, track expenses and send business debt reminders.',
+    'Zalyx Technologies builds digital tools for African entrepreneurs. Zalyx Ledger is our free accounting and bookkeeping app for small businesses in Nigeria and The Gambia: record sales, track expenses and stock, and send business debt reminders.',
   keywords: [
     'free accounting app',
     'accounting app for small business',
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     'business debt reminder',
     'debt tracker app',
     'sales record app',
+    'stock management app',
+    'inventory app for small business',
   ],
   alternates: { canonical: '/' },
 };

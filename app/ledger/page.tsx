@@ -9,7 +9,7 @@ import { SmartAppLink } from '@/src/components/SmartAppLink';
 export const metadata: Metadata = {
   title: 'Zalyx Ledger – Free Accounting & Bookkeeping App for Small Business',
   description:
-    'Free accounting and bookkeeping app for small businesses in Nigeria and The Gambia. Record sales in three taps, track debts with automatic business debt reminders, watch expenses, and close the day with a report. Works offline.',
+    'Free accounting and bookkeeping app for small businesses in Nigeria and The Gambia. Record sales in three taps, track debts with automatic business debt reminders, manage your stock, watch expenses, and close the day with a report. Works offline.',
   keywords: [
     'free accounting app',
     'free bookkeeping app',
@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     'bookkeeping app Gambia',
     'business debt reminder',
     'debt tracker app',
+    'stock management app',
+    'inventory app for small business',
   ],
   alternates: { canonical: '/ledger' },
 };
