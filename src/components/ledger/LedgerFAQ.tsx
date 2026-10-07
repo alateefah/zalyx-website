@@ -28,6 +28,10 @@ const FAQS = [
     a: 'Yes. Zalyx tracks every debt and part payment, and sends a business debt reminder to the customer on WhatsApp with one tap, so you stop chasing people by hand.',
   },
   {
+    q: 'Does it do stock management?',
+    a: 'Yes. Tell Zalyx how many of a product you have and it counts down with every sale, warns you when you are running low, and adds the stock back if you cancel a sale. Tracking is per product, so you only track what you want to.',
+  },
+  {
     q: 'Can my staff use it?',
     a: 'Add staff accounts and choose what each person can see and do.',
   },
