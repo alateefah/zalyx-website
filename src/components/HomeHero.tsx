@@ -33,8 +33,30 @@ export function HomeHero() {
             unused width becomes trailing margin after the image — not a
             gap wedged between the two. */}
         <div className="w-full min-w-0 md:max-w-[600px] md:flex-none">
-          <span className="inline-flex rounded-full border border-[#26C7C3] px-3 mb-8 mt-4 py-2 text-xs font-medium text-[#26C7C3]">
-            Powering everyday businesses in Nigeria &amp; The Gambia
+          {/* Flags only, no pill. Native title= was unreliable (~1s delay,
+              often nothing at all), so the country name is a CSS tooltip that
+              shows instantly on hover and on keyboard focus. */}
+          <span className="inline-flex items-center gap-2 mb-8 mt-4 text-3xl leading-none">
+            {[
+              { flag: '🇳🇬', name: 'Nigeria' },
+              { flag: '🇬🇲', name: 'The Gambia' },
+            ].map(({ flag, name }) => (
+              <span
+                key={name}
+                tabIndex={0}
+                role="img"
+                aria-label={name}
+                className="group relative inline-flex cursor-default rounded outline-none focus-visible:ring-2 focus-visible:ring-[#26C7C3]"
+              >
+                {flag}
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-white px-2 py-1 text-xs font-medium text-[#0A0C14] opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100 light:bg-[#0A0C14] light:text-white"
+                >
+                  {name}
+                </span>
+              </span>
+            ))}
           </span>
 
           <h1 className="font-nohemi mt-5 max-w-2xl text-5xl font-medium leading-[1.05] tracking-tight text-white [text-wrap:balance] sm:text-6xl light:text-[#0A0C14]">
