@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
   return (
     <LegalPage
       title="Privacy Policy"
-      effectiveDate="August 19, 2026"
+      effectiveDate="October 30, 2026"
       intro={
         <>
           Zalyx Innovations &amp; Technologies Ltd. (&ldquo;Zalyx&rdquo;, &ldquo;we&rdquo;,
@@ -109,7 +109,24 @@ export default function PrivacyPolicy() {
           ),
         },
         {
-          title: '7. Changes',
+          title: '7. Children’s privacy',
+          body: (
+            <>
+              Zalyx Ledger is made for business owners and is not for anyone under 18. You must be
+              at least 18 years old to create an account, and we ask you to confirm this when you
+              sign up. We do not knowingly collect personal information from anyone under 18. If we
+              learn that an account belongs to someone under 18, we will suspend it and delete its
+              personal information. If you believe a child has given us their information, please
+              contact{' '}
+              <a href={`mailto:${EMAIL}`} className="text-[#26C7C3] hover:underline">
+                {EMAIL}
+              </a>
+              .
+            </>
+          ),
+        },
+        {
+          title: '8. Changes',
           body: (
             <>
               We may update this policy periodically. The latest version will always be available
