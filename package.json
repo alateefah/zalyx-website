@@ -13,12 +13,12 @@
   },
   "dependencies": {
     "@vercel/analytics": "2.0.1",
-    "autoprefixer": "^10.6.2",
+    "autoprefixer": "^10.7.0",
     "gray-matter": "4.0.3",
-    "next": "16.4.3",
+    "next": "16.4.6",
     "next-mdx-remote": "6.0.0",
-    "postcss": "^8.5.6",
-    "prettier": "^3.9.10",
+    "postcss": "^8.5.33",
+    "prettier": "^3.10.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "tailwindcss": "3"
